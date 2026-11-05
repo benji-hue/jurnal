@@ -43,21 +43,21 @@ img{display:block}
 .pad{position:absolute;inset:40px 48px 34px;z-index:2;display:flex;flex-direction:column}
 
 /* running head / footer */
-.rh,.ft{display:flex;align-items:center;justify-content:space-between;gap:16px;font:500 8.5px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--fg3)}
+.rh,.ft{display:flex;align-items:center;justify-content:space-between;gap:16px;font:500 9.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--fg3)}
 .rh .l,.ft .l{display:flex;align-items:center;gap:10px}
 .ft{margin-top:auto;padding-top:14px}
-.ft .pn{font:600 10px/1 var(--display);letter-spacing:.02em;color:var(--fg)}
+.ft .pn{font:600 11px/1 var(--display);letter-spacing:.02em;color:var(--fg)}
 .ft .pn span{color:var(--fg4);font-weight:400}
 .mark{width:8px;height:8px;border-radius:2px;flex:none;background:conic-gradient(from 200deg,var(--c1),var(--c3),var(--c5),var(--c7),var(--c9),var(--c1));box-shadow:0 0 10px rgba(91,227,139,.6)}
 
 /* type */
-.kicker{display:flex;align-items:center;gap:10px;font:500 9px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--green)}
+.kicker{display:flex;align-items:center;gap:10px;font:500 10px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--green)}
 .kicker::before{content:"";width:18px;height:1px;background:currentColor;opacity:.8}
 .h1{font:600 54px/1 var(--display);letter-spacing:-.045em;margin-top:14px;text-wrap:balance}
 .h1 .g{background:linear-gradient(95deg,#B9FAD2 0%,#5BE38B 40%,#2ED3B7 75%,#33C3F0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .lead{font:400 16px/1.5 var(--text);color:var(--fg2);text-wrap:pretty;max-width:600px}
-.body p{font-size:12.6px;line-height:1.62;color:var(--fg2);text-wrap:pretty}
-.label{font:500 8.5px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--fg3)}
+.body p{font-size:13.2px;line-height:1.6;color:var(--fg2);text-wrap:pretty}
+.label{font:500 9.5px/1 var(--mono);letter-spacing:.15em;text-transform:uppercase;color:var(--fg3)}
 .serif{font-family:var(--serif);font-style:italic;font-weight:500}
 
 /* ---------- Liquid glass ---------- */
@@ -102,11 +102,11 @@ img{display:block}
 .cover-art img{position:absolute;left:50%;top:0;height:100%;width:auto;transform:translateX(-50%) scale(1.13);transform-origin:50% 38%}
 .cover-vig{position:absolute;inset:0;background:radial-gradient(90% 60% at 50% 30%,transparent 40%,rgba(5,8,6,.55) 100%)}
 .cover-top{display:flex;align-items:center;justify-content:space-between;height:44px;padding:0 18px;--r:22px;--blur:16px;
-  font:500 9px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:#fff}
+  font:500 10px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#fff}
 .cover-top .brand{display:flex;align-items:center;gap:10px}
 .cover-top.glass{background:linear-gradient(160deg,rgba(8,14,11,.28),rgba(8,14,11,.42))}
 .emb-tag{position:absolute;right:58px;top:470px;z-index:3;display:flex;align-items:center;gap:8px;padding:8px 12px;--r:14px;--blur:12px;
-  font:500 8px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#fff}
+  font:500 9px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#fff}
 .emb-tag.glass{background:linear-gradient(160deg,rgba(8,14,11,.3),rgba(8,14,11,.5))}
 .emb-tag i{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green)}
 .cover-title{margin-top:auto}
@@ -115,56 +115,54 @@ img{display:block}
 .mega .spec{background:linear-gradient(92deg,#C4FBDA 0%,#5BE38B 32%,#2ED3B7 58%,#33C3F0 78%,#9B8CFF 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
   filter:drop-shadow(0 0 26px rgba(91,227,139,.35))}
 .tagline{margin-top:18px;font:500 italic 25px/1.2 var(--serif);color:var(--fg2)}
-.cover-info{margin-top:30px;display:grid;grid-template-columns:1.15fr 1fr 1fr;padding:18px 6px;--r:24px}
+.cover-info{margin-top:26px;display:grid;grid-template-columns:1.15fr 1fr 1fr;padding:18px 6px;--r:24px}
 .cover-info>div{padding:0 18px;border-left:1px solid rgba(255,255,255,.12)}
 .cover-info>div:first-child{border-left:0}
 .cover-info b{display:block;margin-top:9px;font:600 17px/1.2 var(--text);letter-spacing:-.01em}
-.cover-info .label{font-size:7.6px;letter-spacing:.16em;line-height:1.35;color:var(--fg3)}
-.cover-ft{margin-top:26px;padding-top:0}
+.cover-info .label{font-size:9px;letter-spacing:.12em;line-height:1.35;color:var(--fg3)}
+.cover-ft{margin-top:22px;padding-top:0}
 .specline{flex:1;height:2px;border-radius:2px;background:var(--spectrum);opacity:.85;box-shadow:0 0 12px rgba(91,227,139,.4)}
 
 /* ---------- 02 Refraction ---------- */
 .head{margin-top:30px}
 .quote{margin-top:22px;font:300 27px/1.24 var(--display);letter-spacing:-.035em;color:var(--fg);max-width:640px}
 .quote em{font-style:normal;color:var(--mint)}
-.prism-fig{margin:18px -4px 0;position:relative}
-.prism-fig figcaption{margin-top:6px;font-size:10.5px;line-height:1.5;color:var(--fg3);max-width:560px}
-.cols2{columns:2;column-gap:28px;margin-top:28px}
+.prism-fig{margin:16px -4px 0;position:relative}
+.prism-fig figcaption{margin-top:6px;font-size:12px;line-height:1.5;color:var(--fg3);max-width:620px}
+.cols2{columns:2;column-gap:30px;margin-top:24px}
 .cols2 p{break-inside:avoid;margin-bottom:11px}
-.cols2 p.accent{font:500 italic 20px/1.25 var(--serif);color:var(--mint)}
-.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
-.trio .card{padding:16px 16px 17px}
-.trio .num{font:500 8.5px/1 var(--mono);letter-spacing:.14em;color:var(--fg3)}
-.trio h4{margin-top:22px;font:600 15px/1.15 var(--display);letter-spacing:-.03em}
-.trio p{margin-top:7px;font-size:11.6px;line-height:1.48;color:var(--fg2)}
-.trio .ic{position:absolute;right:14px;top:14px;width:30px;height:30px}
-.toc{margin-top:20px;display:grid;grid-template-columns:auto repeat(6,1fr);align-items:center;gap:0;padding:12px 8px 12px 16px;--r:18px}
-.toc .label{padding-right:12px;color:var(--fg)}
-.toc a{color:inherit;text-decoration:none;display:block;padding:0 9px;border-left:1px solid rgba(255,255,255,.1)}
-.toc a b{display:block;font:600 11px/1 var(--display);color:var(--green)}
-.toc a span{display:block;margin-top:5px;font-size:9.6px;line-height:1.25;color:var(--fg2)}
+.cols2 p.accent{font:500 italic 21px/1.25 var(--serif);color:var(--mint)}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:20px}
+.trio .card{position:relative;padding-top:16px;border-top:1px solid rgba(255,255,255,.16)}
+.trio .num{font:500 9.5px/1 var(--mono);letter-spacing:.12em;color:var(--fg3)}
+.trio h4{margin-top:16px;font:600 17px/1.15 var(--display);letter-spacing:-.035em}
+.trio p{margin-top:8px;font-size:12.8px;line-height:1.5;color:var(--fg2)}
+.trio .ic{position:absolute;right:0;top:12px;width:28px;height:28px}
+.toc{margin-top:22px;display:grid;grid-template-columns:auto repeat(6,1fr);align-items:start;padding:14px 0;border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)}
+.toc .label{padding:2px 12px 0 0;color:var(--fg)}
+.toc a{color:inherit;text-decoration:none;display:block;padding:0 7px}
+.toc a b{display:block;font:600 12px/1 var(--display);color:var(--green)}
+.toc a span{display:block;margin-top:6px;font-size:11px;line-height:1.3;color:var(--fg2)}
 
 /* ---------- 03 Green chemistry ---------- */
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
-.stat{padding:16px 18px 17px}
-.stat .n{font:600 34px/1 var(--display);letter-spacing:-.05em;background:linear-gradient(95deg,#D6FCE5,#5BE38B 60%,#2ED3B7);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stats{display:grid;grid-template-columns:1fr 1fr;column-gap:34px;margin-top:24px}
+.stat{padding:16px 0 18px;border-top:1px solid rgba(255,255,255,.14)}
+.stat .n{font:600 36px/1 var(--display);letter-spacing:-.05em;background:linear-gradient(95deg,#D6FCE5,#5BE38B 60%,#2ED3B7);-webkit-background-clip:text;background-clip:text;color:transparent}
 .stat .n small{font-size:15px;letter-spacing:-.02em;margin-left:4px}
-.stat p{margin-top:9px;font-size:11.6px;line-height:1.45;color:var(--fg2)}
-.sub{display:flex;align-items:baseline;justify-content:space-between;margin-top:36px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.1)}
-.sub h3{font:600 17px/1 var(--display);letter-spacing:-.03em}
-.principles{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:12px}
-.pr{position:relative;padding:12px 12px 12px;border-radius:14px;min-height:120px;
-  background:linear-gradient(160deg,color-mix(in srgb,var(--c) 16%,transparent),rgba(255,255,255,.025) 70%);
-  box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--c) 30%,rgba(255,255,255,.06)),inset 0 1px 0 rgba(255,255,255,.18)}
-.pr .no{display:flex;align-items:center;justify-content:space-between;font:600 8.5px/1 var(--mono);letter-spacing:.08em;color:var(--c)}
+.stat p{margin-top:10px;font-size:12.8px;line-height:1.5;color:var(--fg2)}
+.sub{display:flex;align-items:baseline;justify-content:space-between;margin-top:22px;padding-bottom:6px}
+.sub h3{font:600 18px/1 var(--display);letter-spacing:-.03em}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);column-gap:24px;margin-top:6px}
+.pr{padding:13px 0 14px;border-top:1px solid color-mix(in srgb,var(--c) 45%,rgba(255,255,255,.08))}
+.pr .no{display:flex;align-items:center;gap:8px;font:600 10px/1 var(--mono);letter-spacing:.08em;color:var(--c)}
 .pr .no i{width:6px;height:6px;border-radius:50%;background:var(--c);box-shadow:0 0 8px var(--c)}
-.pr h4{margin-top:10px;font:600 12.2px/1.2 var(--text);letter-spacing:-.005em}
-.pr p{margin-top:5px;font-size:10.2px;line-height:1.38;color:var(--fg3)}
-.src{margin-top:14px;font-size:9.2px;line-height:1.5;color:var(--fg4)}
+.pr h4{margin-top:8px;font:600 13.6px/1.25 var(--text);letter-spacing:-.005em}
+.pr p{margin-top:4px;font-size:12px;line-height:1.42;color:rgba(243,246,242,.68)}
+.src{margin-top:10px;font-size:10.5px;line-height:1.5;color:var(--fg4)}
 
 /* ---------- 04 Traditions & facts ---------- */
-.chem{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:14px}
-.shard{position:relative;height:132px;border-radius:16px;padding:12px 11px;overflow:hidden;
+.chem{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:22px}
+.shard{position:relative;height:140px;border-radius:16px;padding:12px 11px;overflow:hidden;
   background:
     radial-gradient(90% 60% at 25% 10%,rgba(255,255,255,.55),rgba(255,255,255,0) 55%),
     linear-gradient(160deg,var(--c),color-mix(in srgb,var(--c) 55%,#000));
@@ -172,98 +170,90 @@ img{display:block}
 .shard::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:soft-light;
   background:repeating-radial-gradient(circle at 70% 120%,rgba(255,255,255,.0) 0 9px,rgba(255,255,255,.35) 10px,rgba(255,255,255,0) 12px)}
 .shard .sym{font:600 26px/1 var(--display);letter-spacing:-.04em;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.25)}
-.shard .z{position:absolute;right:10px;top:11px;font:600 8px/1 var(--mono);color:rgba(255,255,255,.8)}
-.shard .nm{position:absolute;left:11px;right:8px;bottom:11px;font:600 11px/1.2 var(--text);color:#fff}
-.shard .nm span{display:block;font:500 9.5px/1.25 var(--text);color:rgba(255,255,255,.82)}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px;flex:1;min-height:0}
-.trad{padding:18px 18px 10px;display:flex;flex-direction:column}
-.trad ol{flex:1;display:flex;flex-direction:column;justify-content:space-between}
-.trad h3,.facts h3{font:600 15px/1 var(--display);letter-spacing:-.03em}
-.trad ol{list-style:none;margin-top:8px}
-.trad li{display:grid;grid-template-columns:28px 1fr;gap:8px;padding:11px 0;border-top:1px solid rgba(255,255,255,.08)}
-.trad li:first-child{border-top:0}
-.trad li .i{font:600 9px/1.6 var(--mono);color:var(--green)}
-.trad li b{display:block;font:600 12.6px/1.3 var(--text)}
-.trad li p{margin-top:3px;font-size:11.3px;line-height:1.45;color:var(--fg2)}
-.facts{display:flex;flex-direction:column;gap:12px}
-.facts .fact:last-child{flex:1}
-.fact{padding:16px 18px 17px}
+.shard .z{position:absolute;right:10px;top:11px;font:600 9px/1 var(--mono);color:rgba(255,255,255,.8)}
+.shard .nm{position:absolute;left:11px;right:8px;bottom:11px;font:600 12.4px/1.2 var(--text);color:#fff}
+.shard .nm span{display:block;margin-top:2px;font:500 11.4px/1.25 var(--text);color:rgba(255,255,255,.88)}
+.two{display:grid;grid-template-columns:1fr 1fr;column-gap:34px;margin-top:30px}
+.two h3{font:600 17px/1 var(--display);letter-spacing:-.03em;padding-bottom:14px}
+.trad ol{list-style:none}
+.trad li{display:grid;grid-template-columns:30px 1fr;gap:6px;padding:17px 0 19px;border-top:1px solid rgba(255,255,255,.12)}
+.trad li .i{font:600 10px/1.75 var(--mono);color:var(--green)}
+.trad li b{display:block;font:600 14px/1.3 var(--text)}
+.trad li p{margin-top:4px;font-size:12.6px;line-height:1.5;color:var(--fg2)}
+.fact{position:relative;padding:17px 0 21px;border-top:1px solid rgba(255,255,255,.12)}
 .fact .label{color:var(--green)}
-.fact h4{margin-top:10px;font:600 14px/1.2 var(--display);letter-spacing:-.03em}
-.fact p{margin-top:7px;font-size:11.4px;line-height:1.5;color:var(--fg2)}
-.cup{display:flex;gap:14px;align-items:center;margin-top:12px}
-.cup .sw{flex:1;height:46px;border-radius:12px;display:flex;align-items:flex-end;padding:7px 9px;font:500 8px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase}
-.bigfact{font:600 40px/1 var(--display);letter-spacing:-.05em;color:var(--mint)}
+.fact h4{margin-top:11px;font:600 15px/1.2 var(--display);letter-spacing:-.03em}
+.fact p{margin-top:7px;font-size:12.6px;line-height:1.5;color:var(--fg2)}
+.fact .big{position:absolute;right:0;top:20px;font:600 38px/1 var(--display);color:var(--mint);opacity:.9}
+.cup{display:flex;gap:10px;margin-top:12px}
+.cup .sw{flex:1;height:44px;border-radius:10px;display:flex;align-items:flex-end;padding:7px 9px;font:600 9.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase}
 
 /* ---------- 05-06 Gallery ---------- */
-.gal{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:16px;flex:1;margin-top:18px;min-height:0}
-.win{--c:var(--green);position:relative;border-radius:111px 111px 18px 18px;overflow:hidden;background:#0c0f0d;
+.gal{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:18px 16px;flex:1;margin-top:18px;min-height:0}
+.cell{--c:var(--green);display:flex;flex-direction:column;min-height:0}
+.win{position:relative;flex:1;min-height:0;border-radius:111px 111px 18px 18px;overflow:hidden;background:#0c0f0d;
   box-shadow:0 0 0 1px rgba(255,255,255,.16),0 28px 46px -30px color-mix(in srgb,var(--c) 90%,transparent)}
 .win .ph{position:absolute;inset:0;overflow:hidden}
 .win .ph img{position:absolute;max-width:none}
 .win::after{content:"";position:absolute;inset:6px;border-radius:105px 105px 13px 13px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.32);pointer-events:none;z-index:1}
-.win .cap{position:absolute;left:8px;right:8px;bottom:8px;z-index:2;padding:11px 12px 12px;--r:13px;--blur:14px}
-.cap .top{display:flex;align-items:center;gap:9px}
-.cap .role{font:600 7.6px/1.3 var(--mono);letter-spacing:.11em;text-transform:uppercase;color:var(--c)}
-.cap .role em{display:block;font-style:normal;color:rgba(255,255,255,.66)}
-.cap h3{margin-top:9px;font:600 14.5px/1.12 var(--display);letter-spacing:-.035em}
-.cap p{margin-top:6px;font-size:10.6px;line-height:1.42;color:rgba(255,255,255,.84);text-wrap:pretty}
+.plate{position:absolute;left:8px;right:8px;bottom:8px;z-index:2;display:flex;align-items:center;gap:10px;padding:9px 10px;--r:13px;--blur:14px}
+.plate h3{font:600 13.5px/1.12 var(--display);letter-spacing:-.035em}
+.plate .role{margin-top:5px;font:600 9.5px/1.25 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--c)}
+.plate .role em{font-style:normal;color:rgba(255,255,255,.72)}
+.capt{flex:none;height:54px;margin-top:10px;padding:0 4px;font-size:12px;line-height:1.48;color:var(--fg2);text-wrap:pretty;overflow:hidden}
 .gintro{display:flex;flex-direction:column;padding:6px 4px 0}
 .gintro h2{font:600 34px/1 var(--display);letter-spacing:-.05em;margin-top:16px}
-.gintro p{margin-top:14px;font-size:12px;line-height:1.55;color:var(--fg2)}
-.ptable{margin-top:auto;padding:14px 14px 13px;--r:18px}
-.ptable .label{display:block;margin-bottom:10px;font-size:7.5px}
+.gintro p{margin-top:14px;font-size:13px;line-height:1.55;color:var(--fg2)}
+.ptable{margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,.14)}
+.ptable .label{display:block;margin-bottom:12px}
 .ptable .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
 .ptable .el{width:auto;height:auto;aspect-ratio:1}
 .ptable .el b{font-size:12px;padding-top:4px}
 .ptable .el i{font-size:6px;left:3.5px;top:3px}
-.ptable small{display:block;margin-top:10px;font-size:9.2px;line-height:1.4;color:var(--fg3)}
+.ptable small{display:block;margin-top:12px;font-size:11.5px;line-height:1.45;color:var(--fg3)}
 .gquote{position:relative;border-radius:111px 111px 18px 18px;display:flex;flex-direction:column;padding:8px 8px 18px;--r:111px 111px 18px 18px}
 .qart{position:relative;height:196px;border-radius:103px 103px 12px 12px;overflow:hidden;flex:none;box-shadow:0 0 0 1px rgba(255,255,255,.28),0 18px 34px -16px rgba(91,227,139,.55)}
 .qart img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;transform:scale(1.32);transform-origin:50% 62%}
 .qt{display:flex;flex-direction:column;flex:1;justify-content:flex-end;padding:0 10px}
 .gquote .q{font:500 italic 22px/1.18 var(--serif);color:#fff}
 .gquote .qm{font:600 54px/0.6 var(--display);color:var(--green);opacity:.9}
-.gquote .label{margin-top:16px;color:var(--fg2);font-size:7.5px;line-height:1.5}
+.gquote .label{margin-top:16px;color:var(--fg2);font-size:9px;line-height:1.5}
 .gquote .row{display:flex;gap:6px;margin-top:14px}
 .gquote .row span{flex:1;height:5px;border-radius:3px}
 
 /* ---------- 07 Structure ---------- */
-.mentors{display:grid;grid-template-columns:186px 1fr;gap:16px;align-items:center;padding:14px 18px;margin-top:20px;--r:18px}
-.mentors b{display:block;font:600 12.4px/1.2 var(--display);letter-spacing:-.035em;white-space:nowrap}
-.mentors .label{display:block;margin-top:6px;font-size:7.5px}
-.mentors p{font-size:11.2px;line-height:1.48;color:var(--fg2)}
-.tree{position:relative;height:22px}
-.tree::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.15))}
-.leaders{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.lead-card{display:grid;grid-template-columns:64px 1fr;gap:16px;padding:16px 16px 17px;--r:20px}
-.lead-card .av{--s:64px}
-.who .rl,.who .nm{padding-right:40px}
-.who .rl{font:600 15px/1.15 var(--display);letter-spacing:-.035em}
-.who .nm{margin-top:6px;display:flex;align-items:center;gap:8px;font:500 12.2px/1.2 var(--text);color:#fff}
-.nick{display:inline-block;padding:3px 7px;border-radius:20px;font:600 7.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#06110b;background:var(--c)}
-.who p{margin-top:8px;font-size:11px;line-height:1.46;color:var(--fg2)}
-.who .tl{display:block;margin-top:10px;font:500 7.4px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--fg3)}
-.fan{position:relative;height:22px}
-.fan::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.12))}
-.team{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}
-.tcard{display:grid;grid-template-columns:46px 1fr;gap:13px;padding:13px 14px 14px;--r:17px;min-height:110px}
-.tcard .av{--s:46px}
-.tcard .rl{font:600 12.6px/1.15 var(--display);letter-spacing:-.035em}
-.tcard .nm{margin-top:5px;font:500 11.6px/1.2 var(--text);color:#fff;display:flex;align-items:center;gap:7px}
-.tcard .nm i{font:600 7px/1 var(--mono);font-style:normal;color:var(--c);letter-spacing:.06em}
-.tcard p{margin-top:7px;font-size:10.5px;line-height:1.45;color:var(--fg2)}
-.corner{position:absolute;right:12px;top:12px}
+.mentors{display:grid;grid-template-columns:196px 1fr;gap:18px;align-items:start;padding:14px 0;margin-top:20px;border-top:1px solid rgba(255,255,255,.14);border-bottom:1px solid rgba(255,255,255,.14)}
+.mentors b{display:block;font:600 13px/1.2 var(--display);letter-spacing:-.035em;white-space:nowrap}
+.mentors .label{display:block;margin-top:7px}
+.mentors p{font-size:12.6px;line-height:1.5;color:var(--fg2)}
+.sect{margin-top:20px;color:var(--green)}
+.leaders{display:grid;grid-template-columns:1fr 1fr;column-gap:34px}
+.lead-card{position:relative;display:grid;grid-template-columns:66px 1fr;gap:16px;padding:16px 0 2px}
+.lead-card::before{content:"";position:absolute;left:0;right:0;top:4px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--c),transparent 80%)}
+.lead-card .av{--s:66px;margin-top:4px}
+.who .rl{font:600 15.5px/1.15 var(--display);letter-spacing:-.035em}
+.who .nm{margin-top:6px;display:flex;align-items:center;gap:8px;font:500 13px/1.2 var(--text);color:#fff}
+.who .rl,.who .nm{padding-right:42px}
+.nick{display:inline-block;padding:3px 7px;border-radius:20px;font:600 8.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#06110b;background:var(--c)}
+.who p{margin-top:8px;font-size:12.4px;line-height:1.5;color:var(--fg2)}
+.team{display:grid;grid-template-columns:1fr 1fr;column-gap:34px;margin-top:8px}
+.tcard{position:relative;display:grid;grid-template-columns:44px 1fr;gap:14px;padding:14px 0 14px;border-top:1px solid rgba(255,255,255,.1)}
+.tcard .av{--s:44px}
+.tcard .rl{font:600 13.4px/1.15 var(--display);letter-spacing:-.035em}
+.tcard .nm{margin-top:5px;font:500 12.4px/1.2 var(--text);color:#fff}
+.tcard p{margin-top:6px;font-size:12px;line-height:1.48;color:var(--fg2)}
+.corner{position:absolute;right:0;top:14px}
+.lead-card .corner{top:16px}
 
 /* ---------- 08 Calendar ---------- */
-.legend{display:flex;flex-wrap:nowrap;gap:5px;margin-top:18px}
-.chip{display:flex;align-items:center;gap:6px;padding:6px 9px 6px 7px;border-radius:30px;font:500 9.6px/1 var(--text);color:var(--fg2);white-space:nowrap;
+.legend{display:flex;flex-wrap:nowrap;gap:4px;margin-top:18px}
+.chip{display:flex;align-items:center;gap:6px;padding:6px 8px 6px 7px;border-radius:30px;font:500 10.2px/1 var(--text);color:var(--fg2);white-space:nowrap;
   background:color-mix(in srgb,var(--k) 12%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--k) 40%,transparent)}
 .chip i{width:8px;height:8px;border-radius:50%;background:var(--k);box-shadow:0 0 8px var(--k)}
-.chip b{font:600 9.5px/1 var(--mono);color:#fff}
+.chip b{font:600 10px/1 var(--mono);color:#fff}
 .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:16px}
-.wd{font:500 8px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--fg3);padding:0 2px 2px}
-.day{--k:#888;position:relative;height:138px;border-radius:12px;padding:9px 8px 9px;overflow:hidden;display:flex;flex-direction:column;
+.wd{font:500 9px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--fg3);padding:0 2px 2px}
+.day{--k:#888;position:relative;height:142px;border-radius:12px;padding:9px 7px 9px;overflow:hidden;display:flex;flex-direction:column;
   background:
     radial-gradient(100% 60% at 20% 0%,rgba(255,255,255,.2),rgba(255,255,255,0) 60%),
     linear-gradient(165deg,color-mix(in srgb,var(--k) 30%,transparent),color-mix(in srgb,var(--k) 7%,transparent));
@@ -273,29 +263,29 @@ img{display:block}
     linear-gradient(165deg,color-mix(in srgb,var(--k) 55%,transparent),color-mix(in srgb,var(--k) 16%,transparent));
   box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--k) 80%,transparent),inset 0 1px 0 rgba(255,255,255,.4),0 10px 26px -12px var(--k)}
 .day .d{font:500 20px/1 var(--display);letter-spacing:-.04em}
-.day .m{position:absolute;right:8px;top:11px;font:500 7px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.day .m{position:absolute;right:8px;top:11px;font:500 8.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.62)}
 .day .dot{position:absolute;right:9px;top:10px;width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 10px #fff,0 0 2px #fff}
-.day .t{margin-top:auto;font:500 9.6px/1.27 var(--text);color:rgba(255,255,255,.92);hyphens:manual}
-.day .ico{display:block;flex:none;width:32px;height:32px;margin-top:10px;fill:none;stroke:currentColor;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round;
+.day .t{margin-top:auto;font:500 11px/1.2 var(--text);color:rgba(255,255,255,.95);hyphens:manual}
+.day .ico{display:block;flex:none;width:28px;height:28px;margin-top:8px;fill:none;stroke:currentColor;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round;
   color:color-mix(in srgb,var(--k) 52%,#fff);filter:drop-shadow(0 0 6px color-mix(in srgb,var(--k) 85%,transparent))}
 .day .ico .f{fill:currentColor;stroke:none}
 .day.off .ico{position:relative;z-index:1;color:rgba(255,255,255,.3);filter:none}
-.day.off .t{position:relative;z-index:1;font:500 7.2px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:rgba(243,246,242,.45)}
+.day.off .t{position:relative;z-index:1;font:500 8.5px/1.35 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:rgba(243,246,242,.5)}
 .day.off{background:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
 .day.off .d{color:var(--fg4)}
 .day.off::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 7px)}
-.timeline{margin-top:24px;padding:16px 18px 16px;--r:20px}
+.timeline{margin-top:24px;padding-top:16px;border-top:1px solid rgba(255,255,255,.14)}
 .timeline .hd{display:flex;justify-content:space-between;align-items:baseline}
-.timeline .hd b{font:600 13px/1 var(--display);letter-spacing:-.03em}
+.timeline .hd b{font:600 15px/1 var(--display);letter-spacing:-.03em}
 .strip{display:grid;grid-template-columns:repeat(24,1fr);gap:3px;height:22px;margin-top:14px}
 .strip span{border-radius:4px;background:var(--k);box-shadow:0 0 12px -3px var(--k),inset 0 1px 0 rgba(255,255,255,.45)}
 .phases{display:grid;grid-template-columns:4fr 4fr 6fr 8fr 2fr;gap:3px;margin-top:8px}
 .phase{position:relative;padding-top:9px}
 .phase::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;border:1px solid rgba(255,255,255,.3);border-top:0;border-radius:0 0 4px 4px}
-.phase b{display:block;font:600 10.4px/1.15 var(--text)}
-.phase span{display:block;margin-top:3px;font:500 7.3px/1.2 var(--mono);letter-spacing:.06em;color:var(--fg3)}
-.phase em{display:block;margin-top:3px;font:500 7.3px/1 var(--mono);font-style:normal;color:var(--fg4)}
-.timeline .note{margin-top:12px;font-size:9.8px;line-height:1.45;color:var(--fg3)}
+.phase b{display:block;font:600 12px/1.15 var(--text)}
+.phase span{display:block;margin-top:3px;font:500 8.5px/1.2 var(--mono);color:var(--fg3)}
+.phase em{display:block;margin-top:3px;font:500 8.5px/1 var(--mono);font-style:normal;color:var(--fg4)}
+.timeline .note{margin-top:12px;font-size:11.5px;line-height:1.5;color:var(--fg3)}
 
 /* ---------- 09 Back cover ---------- */
 .back-art{position:absolute;left:0;right:0;bottom:0;height:700px;overflow:hidden;
@@ -309,8 +299,8 @@ img{display:block}
 .nums>div{padding:0 16px;border-left:1px solid rgba(255,255,255,.12)}
 .nums>div:first-child{border-left:0}
 .nums b{display:block;font:600 34px/1 var(--display);letter-spacing:-.05em}
-.nums span{display:block;margin-top:9px;font:500 7.8px/1.35 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--fg3)}
-.back-ft.glass{padding:13px 18px;--r:18px;--blur:14px;color:var(--fg2);background:linear-gradient(160deg,rgba(8,14,11,.35),rgba(8,14,11,.55))}
+.nums span{display:block;margin-top:9px;font:500 9px/1.35 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--fg3)}
+.back-ft.glass{letter-spacing:.07em;padding:13px 18px;--r:18px;--blur:14px;color:var(--fg2);background:linear-gradient(160deg,rgba(8,14,11,.35),rgba(8,14,11,.55))}
 </style>
 </head>
 <body>
@@ -408,7 +398,7 @@ img{display:block}
         <line x1="303" y1="130" x2="410" y2="141" stroke="#fff" stroke-width="8" stroke-opacity=".25" filter="url(#soft)"/>
         <circle cx="303" cy="130" r="3" fill="#fff"/>
         <!-- labels -->
-        <g font-family="JetBrains Mono" font-size="8.5" letter-spacing="1.6" fill="rgba(243,246,242,.62)">
+        <g font-family="JetBrains Mono" font-size="9.5" letter-spacing="1.6" fill="rgba(243,246,242,.62)">
           <text x="2" y="138">СВЕТ</text>
           <text x="2" y="151" fill="rgba(243,246,242,.4)">ИДЕИ И ОБЩЕЕ ДЕЛО</text>
           <text x="356" y="256" text-anchor="middle">ПРИЗМА · НАШ ПРОФИЛЬ</text>
@@ -427,19 +417,19 @@ img{display:block}
     </div>
 
     <div class="trio">
-      <div class="glass card">
+      <div class="card">
         <svg class="ic" viewBox="0 0 30 30"><polygon points="4,24 12,5 26,10 22,26" fill="none" stroke="#5BE38B" stroke-width="1.4" stroke-linejoin="round"/><polygon points="12,5 26,10 16,15" fill="#5BE38B" fill-opacity=".35"/></svg>
         <span class="num">01 · СТЕКЛО</span>
         <h4>Осколок</h4>
         <p>Каждый из нас: свой цвет, свой характер и своя история.</p>
       </div>
-      <div class="glass card">
+      <div class="card">
         <svg class="ic" viewBox="0 0 30 30"><path d="M3 9 H27 M3 21 H27 M11 3 V27 M19 3 V27" stroke="#33C3F0" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg>
         <span class="num">02 · СВИНЦОВЫЙ ПРОФИЛЬ</span>
         <h4>Связь</h4>
         <p>То, что соединяет осколки в узор: общее дело, традиции и дружба.</p>
       </div>
-      <div class="glass card">
+      <div class="card">
         <svg class="ic" viewBox="0 0 30 30"><circle cx="15" cy="15" r="5" fill="#FFC43D"/><path d="M15 2V7M15 23V28M2 15H7M23 15H28M5.8 5.8L9.3 9.3M20.7 20.7L24.2 24.2M5.8 24.2L9.3 20.7M20.7 9.3L24.2 5.8" stroke="#FFC43D" stroke-width="1.4" stroke-linecap="round"/></svg>
         <span class="num">03 · СВЕТ</span>
         <h4>Идеи</h4>
@@ -447,7 +437,7 @@ img{display:block}
       </div>
     </div>
 
-    <nav class="toc glass">
+    <nav class="toc">
       <span class="label">В номере</span>
       <a><b>02</b><span>Мастерская «Преломление»</span></a>
       <a><b>03</b><span>Зелёная химия</span></a>
@@ -477,10 +467,10 @@ img{display:block}
     <p class="lead" style="margin-top:18px">Химия, которая отвечает за последствия. Её задача — создавать вещества и процессы, в которых меньше опасных веществ и отходов и больше пользы для людей и планеты.</p>
 
     <div class="stats">
-      <div class="glass stat"><div class="n">12</div><p>принципов зелёной химии сформулировали Пол Анастас и Джон Уорнер в 1998 году. Это наша «таблица умножения».</p></div>
-      <div class="glass stat"><div class="n">2005</div><p>Нобелевская премия по химии за метатезис. Нобелевский комитет назвал открытие «большим шагом вперёд для зелёной химии».</p></div>
-      <div class="glass stat"><div class="n">25–100<small>+ кг</small></div><p>отходов приходится на 1 кг лекарства в фармацевтике (E-фактор Роджера Шелдона). Зелёная химия учит уменьшать это число.</p></div>
-      <div class="glass stat"><div class="n">24<small>дня</small></div><p>длилась первая смена Национального детского технопарка в 2021 году. «Зелёная химия» была одним из трёх её направлений.</p></div>
+      <div class="stat"><div class="n">12</div><p>принципов зелёной химии сформулировали Пол Анастас и Джон Уорнер в 1998 году.</p></div>
+      <div class="stat"><div class="n">2005</div><p>Нобелевская премия по химии за метатезис — «большой шаг вперёд для зелёной химии».</p></div>
+      <div class="stat"><div class="n">25–100<small>+ кг</small></div><p>отходов на 1 кг лекарства в фармацевтике (E-фактор Шелдона). Зелёная химия учит их сокращать.</p></div>
+      <div class="stat"><div class="n">24<small>дня</small></div><p>длилась первая смена технопарка в 2021 году, и «Зелёная химия» была одним из трёх её направлений.</p></div>
     </div>
 
     <div class="sub"><h3>12 принципов зелёной химии</h3><span class="label">П. Анастас, Дж. Уорнер · 1998</span></div>
@@ -516,35 +506,37 @@ img{display:block}
     </div>
 
     <div class="two">
-      <div class="glass trad">
+      <div class="trad">
         <h3>Наши традиции</h3>
         <ol>
-          <li><span class="i">01</span><div><b>Корпоративный совет</b><p>Генеральный директор представляет интересы профиля на «Корпоративном совете», а затем распределяет поручения внутри команды.</p></div></li>
-          <li><span class="i">02</span><div><b>Общая копилка технобаллов</b><p>Каждый балл на счету: финансовый менеджер ведёт учёт и вместе с командой продумывает стратегию успеха.</p></div></li>
-          <li><span class="i">03</span><div><b>Спорт-минутки</b><p>Спорт-менеджер не даёт засидеться: разминки и тренировки перед соревнованиями — часть нашего дня.</p></div></li>
-          <li><span class="i">04</span><div><b>Четыре коворкинга</b><p>Время, когда весь профиль работает над проектами вместе. На втором коворкинге — релиз.</p></div></li>
-          <li><span class="i">05</span><div><b>Каждый — витраж</b><p>Мы превратили свои портреты в витражи: так каждый стал осколком общего узора мастерской «Преломление».</p></div></li>
+          <li><span class="i">01</span><div><b>Корпоративный совет</b><p>Генеральный директор представляет профиль на «Корпоративном совете» и распределяет поручения в команде.</p></div></li>
+          <li><span class="i">02</span><div><b>Общая копилка технобаллов</b><p>Финансовый менеджер считает каждый балл и вместе с командой строит стратегию успеха.</p></div></li>
+          <li><span class="i">03</span><div><b>Спорт-минутки</b><p>Разминки и тренировки перед соревнованиями — часть нашего дня.</p></div></li>
+          <li><span class="i">04</span><div><b>Четыре коворкинга</b><p>Весь профиль работает над проектами вместе. На втором коворкинге — релиз.</p></div></li>
+          <li><span class="i">05</span><div><b>Каждый — витраж</b><p>Мы превратили свои портреты в витражи: каждый стал осколком общего узора.</p></div></li>
         </ol>
       </div>
       <div class="facts">
-        <div class="glass fact">
+        <h3>Интересные факты</h3>
+        <div class="fact">
           <span class="label">Факт № 1 · Нанотехнологии Древнего Рима</span>
           <h4>Кубок Ликурга</h4>
-          <p>Римский кубок IV века в отражённом свете выглядит зелёным, а на просвет — красным. Секрет — наночастицы золота и серебра в стекле: нанотехнологии за 1600 лет до появления самого слова.</p>
+          <p>Римский кубок IV века в отражённом свете зелёный, а на просвет — красный. Секрет — наночастицы золота и серебра в стекле: нанотехнологии за 1600 лет до появления самого слова.</p>
           <div class="cup">
             <div class="sw" style="background:linear-gradient(150deg,#7fd99a,#1e7a46);color:#06200f">отражение</div>
             <div class="sw" style="background:linear-gradient(150deg,#ff7a6b,#9e1230);color:#2a0308">на просвет</div>
           </div>
         </div>
-        <div class="glass fact">
+        <div class="fact">
           <span class="label">Факт № 2 · Стекло и экология</span>
-          <div class="bigfact" style="margin-top:12px">∞</div>
-          <p>Стекло можно переплавлять снова и снова без потери качества. Каждые 10 % стеклобоя в шихте снижают затраты энергии на плавку примерно на 2–3 %.</p>
+          <span class="big">∞</span>
+          <h4>Бесконечная переработка</h4>
+          <p>Стекло можно переплавлять снова и снова без потери качества. Каждые 10 % стеклобоя экономят на плавке около 2–3 % энергии.</p>
         </div>
-        <div class="glass fact">
+        <div class="fact">
           <span class="label">Факт № 3 · Рецепт стекла</span>
           <h4>Песок, сода и известняк</h4>
-          <p>Обычное оконное стекло примерно на 70 % состоит из кварцевого песка (SiO<sub style="font-size:.75em;line-height:0">2</sub>), остальное — в основном оксиды натрия и кальция из соды и известняка. Металлы-красители добавляют в шихту перед плавкой.</p>
+          <p>Оконное стекло примерно на 70 % состоит из кварцевого песка (SiO<sub style="font-size:.75em;line-height:0">2</sub>), остальное — в основном оксиды натрия и кальция из соды и известняка.</p>
         </div>
       </div>
     </div>
@@ -567,7 +559,7 @@ img{display:block}
         <h2>Лица<br>профиля</h2>
         <p>Десять человек — десять осколков одного витража. Каждый портрет мы превратили в витражное стекло.</p>
         <p style="margin-top:8px">Порядок — по алфавиту фамилий, как в списке профиля.</p>
-        <div class="glass ptable">
+        <div class="ptable">
           <span class="label">Периодическая система профиля</span>
           <div class="grid" id="ptable"></div>
           <small>Номер — порядок в списке. Символ — наш «химический элемент».</small>
@@ -606,15 +598,15 @@ img{display:block}
       <div class="kicker">Структура самоуправления</div>
       <h2 class="h1" style="font-size:44px">Корпорация<br><span class="g">«Зелёная химия»</span></h2>
     </div>
-    <p class="lead" style="margin-top:14px;font-size:14.5px">На смене «Индустрия будущего» профиль работает как настоящая компания: у каждого своя должность и зона ответственности. По отдельности — элементы, вместе — устойчивое соединение.</p>
+    <p class="lead" style="margin-top:14px;font-size:15px;max-width:none">На смене «Индустрия будущего» профиль работает как компания: у каждого своя должность и зона ответственности. По отдельности — элементы, вместе — устойчивое соединение.</p>
 
-    <div class="glass mentors">
+    <div class="mentors">
       <div><b>Тимлидеры-инвесторы</b><span class="label">Наставники профиля</span></div>
       <p>Руководят деятельностью стартап-центра, направляют учащихся при выборе содержания деятельности, создают ситуацию успеха и мотивируют на результат.</p>
     </div>
-    <div class="tree"></div>
+    <div class="label sect">Руководство профиля</div>
     <div class="leaders" id="leaders"></div>
-    <div class="fan"></div>
+    <div class="label sect">Команда · 8 должностей</div>
     <div class="team" id="team"></div>
     <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">07 <span>/ 09</span></span></div>
   </div>
@@ -636,7 +628,7 @@ img{display:block}
     <p class="lead" style="margin-top:12px;font-size:14.5px">С 28 октября по 20 ноября 2026 года. Каждый день смены — ещё один осколок нашего витража, а весь календарь — витраж целиком.</p>
     <div class="legend" id="legend"></div>
     <div class="cal" id="cal"></div>
-    <div class="glass timeline">
+    <div class="timeline">
       <div class="hd"><b>Как растёт команда</b><span class="label">Модель Брюса Такмана</span></div>
       <div class="strip" id="strip"></div>
       <div class="phases">
@@ -646,7 +638,7 @@ img{display:block}
         <div class="phase"><b>Результат</b><span>функционирование</span><em>11.11—18.11</em></div>
         <div class="phase"><b>Финал</b><span>завершение</span><em>19—20.11</em></div>
       </div>
-      <p class="note">Психолог Брюс Такман описал стадии, через которые проходит любая команда (1965, 1977). Так их можно наложить на нашу смену: от первого знакомства до общего финала.</p>
+      <p class="note">Стадии развития команды по модели психолога Брюса Такмана (1965, 1977) — от первого знакомства до общего финала.</p>
     </div>
     <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">08 <span>/ 09</span></span></div>
   </div>
@@ -707,13 +699,12 @@ document.getElementById('principles').innerHTML = PR.map((p,i)=>
   `<div class="pr" style="--c:${prCols[i]}"><div class="no">${pad2(i+1)}<i></i></div><h4>${p[0]}</h4><p>${p[1]}</p></div>`).join('');
 
 /* gallery */
-const win = p => `<article class="win" style="--c:${COL(p.n)}" data-n="${p.n}">
-  <div class="ph"><img src="assets/img/people/${p.img}.webp" alt="${p.first} ${p.last}"></div>
-  <div class="cap glass dark">
-    <div class="top">${el(p,'sm')}<div class="role">${p.role}${p.nick?`<em>«${p.nick}»</em>`:''}</div></div>
-    <h3>${p.first}<br>${p.last}</h3>
-    <p>${p.cap}</p>
-  </div></article>`;
+const win = p => `<article class="cell" style="--c:${COL(p.n)}">
+  <div class="win" data-n="${p.n}">
+    <div class="ph"><img src="assets/img/people/${p.img}.webp" alt="${p.first} ${p.last}"></div>
+    <div class="plate glass dark">${el(p,'sm')}<div><h3>${p.first}<br>${p.last}</h3><div class="role">${p.role}${p.nick?` <em>«${p.nick}»</em>`:''}</div></div></div>
+  </div>
+  <p class="capt">${p.cap}</p></article>`;
 document.getElementById('gal1').insertAdjacentHTML('beforeend', P.slice(0,5).map(win).join(''));
 document.getElementById('gal2').innerHTML = P.slice(5,10).map(win).join('') +
   `<div class="glass prism gquote"><div class="qart"><img src="assets/img/logo.webp" alt=""></div><div class="qt"><div class="qm">“</div><p class="q">Поодиночке осколки кажутся случайными. Вместе — это витраж.</p>
@@ -724,17 +715,17 @@ document.getElementById('ptable').innerHTML = P.map(p=>el(p)).join('');
 /* structure */
 const byRole = r => P.find(p=>p.role===r);
 const leadersHTML = ['Генеральный директор','Операционный менеджер'].map(r=>{const p=byRole(r);return `
-  <div class="glass lead-card" style="--c:${COL(p.n)}">
+  <div class="lead-card" style="--c:${COL(p.n)}">
     <div class="av" data-n="${p.n}"><img src="assets/img/people/${p.img}.webp" alt=""></div>
     <div class="who"><div class="rl">${p.role}</div>
       <div class="nm">${p.first} ${p.last}<span class="nick">${p.nick}</span></div>
-      <span class="tl">Задачи</span><p>${p.task}</p></div>
+      <p>${p.task}</p></div>
     <div class="corner">${el(p,'sm')}</div>
   </div>`}).join('');
 document.getElementById('leaders').innerHTML = leadersHTML;
 const order = ['Финансовый менеджер','Бренд-менеджер','Дизайнер продукта','Тестировщик','Медиа-продюсер','Спорт-менеджер','СММ-специалист','Менеджер проекта'];
 document.getElementById('team').innerHTML = order.map(r=>{const p=byRole(r);return `
-  <div class="glass tcard" style="--c:${COL(p.n)}">
+  <div class="tcard" style="--c:${COL(p.n)}">
     <div class="av" data-n="${p.n}"><img src="assets/img/people/${p.img}.webp" alt=""></div>
     <div class="who"><div class="rl">${p.role}</div>
       <div class="nm">${p.first} ${p.last}</div>
@@ -840,7 +831,7 @@ async function crops(){
   document.querySelectorAll('.win').forEach(w=>{
     const p=P[w.dataset.n-1], img=w.querySelector('img'), r=w.getBoundingClientRect();
     const s0=Math.max(r.width/img.naturalWidth, r.height/img.naturalHeight)*(p.gz||1);
-    placeImg(img,r.width,r.height,p.face[0],p.face[1],s0,.5,.32);
+    placeImg(img,r.width,r.height,p.face[0],p.face[1],s0,.5,.36);
   });
   document.querySelectorAll('.av').forEach(a=>{
     const p=P[a.dataset.n-1], img=a.querySelector('img'), r=a.getBoundingClientRect();
@@ -848,9 +839,19 @@ async function crops(){
     placeImg(img,r.width,r.height,p.face[0],p.face[1],s,.5,.5);
   });
 }
+function checkOverflow(){
+  document.querySelectorAll('.page').forEach((pg,i)=>{
+    const pad=pg.querySelector('.pad');
+    if(pad.scrollHeight>pad.clientHeight+1) console.log(`OVERFLOW p${i+1}: page content +${pad.scrollHeight-pad.clientHeight}px`);
+    pg.querySelectorAll('.day,.capt,.legend,.toc,.plate,.cover-info').forEach(e=>{
+      const dh=e.scrollHeight-e.clientHeight, dw=e.scrollWidth-e.clientWidth;
+      if(dh>1||dw>1) console.log(`OVERFLOW p${i+1}: .${e.className.split(' ')[0]} "${e.textContent.trim().replace(/\s+/g,' ').slice(0,28)}" h+${dh} w+${dw}`);
+    });
+  });
+}
 (async()=>{ await document.fonts.ready;
   await Promise.all(['600 20px Unbounded','400 13px Onest','500 10px "JetBrains Mono"','italic 500 20px "Cormorant Garamond"'].map(f=>document.fonts.load(f,'АаЁё')));
-  await crops(); window.__ready=true; })();
+  await crops(); checkOverflow(); window.__ready=true; })();
 </script>
 </body>
 </html>
