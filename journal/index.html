@@ -1,0 +1,813 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=794">
+<title>Зелёный спектр — журнал профиля «Зелёная химия»</title>
+<style>
+/* ---------- Fonts (local, Cyrillic + Latin) ---------- */
+@font-face{font-family:"Unbounded";font-weight:200 900;font-display:block;src:url(assets/fonts/unbounded-cyrillic-wght-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Unbounded";font-weight:200 900;font-display:block;src:url(assets/fonts/unbounded-latin-wght-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Onest";font-weight:100 900;font-display:block;src:url(assets/fonts/onest-cyrillic-wght-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Onest";font-weight:100 900;font-display:block;src:url(assets/fonts/onest-latin-wght-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"JetBrains Mono";font-weight:100 800;font-display:block;src:url(assets/fonts/jetbrains-mono-cyrillic-wght-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"JetBrains Mono";font-weight:100 800;font-display:block;src:url(assets/fonts/jetbrains-mono-latin-wght-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;font-display:block;src:url(assets/fonts/cormorant-garamond-cyrillic-500-italic.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;font-display:block;src:url(assets/fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+/* ---------- Tokens ---------- */
+:root{
+  --bg:#050806; --fg:#F3F6F2; --fg2:rgba(243,246,242,.78); --fg3:rgba(243,246,242,.54); --fg4:rgba(243,246,242,.3);
+  --green:#5BE38B; --mint:#A6F7C6;
+  --c1:#FF5E5B; --c2:#FF8A3D; --c3:#FFC43D; --c4:#D4E84A; --c5:#5BE38B;
+  --c6:#2ED3B7; --c7:#33C3F0; --c8:#4D8BFF; --c9:#7B6CFF; --c10:#B36CFF;
+  --k-proj:#5BE38B; --k-art:#A07BFF; --k-sport:#FFB547; --k-fun:#FF6F91; --k-common:#4FC3F7;
+  --display:"Unbounded",system-ui,sans-serif;
+  --text:"Onest","Inter",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --spectrum:linear-gradient(90deg,var(--c1),var(--c2),var(--c3),var(--c4),var(--c5),var(--c6),var(--c7),var(--c8),var(--c9),var(--c10));
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#000}
+body{width:794px;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision;font-kerning:normal}
+img{display:block}
+
+/* ---------- Page ---------- */
+.page{position:relative;width:794px;height:1123px;overflow:hidden;background:var(--bg);color:var(--fg);
+  font-family:var(--text);font-size:13px;line-height:1.55;isolation:isolate}
+.page::after{content:"";position:absolute;inset:0;z-index:40;pointer-events:none;opacity:.07;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.bgfx{position:absolute;inset:0;z-index:0;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(72px)}
+.pad{position:absolute;inset:40px 48px 34px;z-index:2;display:flex;flex-direction:column}
+
+/* running head / footer */
+.rh,.ft{display:flex;align-items:center;justify-content:space-between;gap:16px;font:500 8.5px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--fg3)}
+.rh .l,.ft .l{display:flex;align-items:center;gap:10px}
+.ft{margin-top:auto;padding-top:14px}
+.ft .pn{font:600 10px/1 var(--display);letter-spacing:.02em;color:var(--fg)}
+.ft .pn span{color:var(--fg4);font-weight:400}
+.mark{width:8px;height:8px;border-radius:2px;flex:none;background:conic-gradient(from 200deg,var(--c1),var(--c3),var(--c5),var(--c7),var(--c9),var(--c1));box-shadow:0 0 10px rgba(91,227,139,.6)}
+
+/* type */
+.kicker{display:flex;align-items:center;gap:10px;font:500 9px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--green)}
+.kicker::before{content:"";width:18px;height:1px;background:currentColor;opacity:.8}
+.h1{font:600 54px/1 var(--display);letter-spacing:-.045em;margin-top:14px;text-wrap:balance}
+.h1 .g{background:linear-gradient(95deg,#B9FAD2 0%,#5BE38B 40%,#2ED3B7 75%,#33C3F0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font:400 16px/1.5 var(--text);color:var(--fg2);text-wrap:pretty;max-width:600px}
+.body p{font-size:12.6px;line-height:1.62;color:var(--fg2);text-wrap:pretty}
+.label{font:500 8.5px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--fg3)}
+.serif{font-family:var(--serif);font-style:italic;font-weight:500}
+
+/* ---------- Liquid glass ---------- */
+.glass{position:relative;border-radius:var(--r,22px);
+  background:
+    radial-gradient(120% 70% at 10% -10%,rgba(255,255,255,.16),rgba(255,255,255,0) 55%),
+    linear-gradient(155deg,rgba(255,255,255,.12),rgba(255,255,255,.04) 45%,rgba(255,255,255,.025));
+  -webkit-backdrop-filter:blur(var(--blur,22px)) saturate(170%);backdrop-filter:blur(var(--blur,22px)) saturate(170%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.42),
+    inset 0 -1px 0 rgba(255,255,255,.07),
+    inset 0 0 0 1px rgba(255,255,255,.07),
+    inset 0 18px 28px -22px rgba(255,255,255,.42),
+    inset 0 -14px 24px -20px rgba(255,255,255,.12),
+    0 24px 50px -26px rgba(0,0,0,.8)}
+.glass::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;pointer-events:none;
+  background:linear-gradient(140deg,rgba(255,255,255,.8),rgba(255,255,255,.1) 26%,rgba(255,255,255,0) 50%,rgba(255,255,255,.06) 74%,rgba(255,255,255,.5));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+.glass.prism::before{padding:1.2px;background:conic-gradient(from 215deg,rgba(255,255,255,.9),rgba(255,94,91,.75),rgba(255,196,61,.75),rgba(91,227,139,.85),rgba(51,195,240,.75),rgba(123,108,255,.75),rgba(179,108,255,.7),rgba(255,255,255,.9))}
+.glass.dark{background:
+    radial-gradient(120% 70% at 10% -10%,rgba(255,255,255,.14),rgba(255,255,255,0) 55%),
+    linear-gradient(160deg,rgba(10,16,13,.38),rgba(10,16,13,.58))}
+
+/* element tile (periodic table) */
+.el{--c:var(--green);position:relative;width:40px;height:40px;border-radius:9px;flex:none;
+  background:linear-gradient(150deg,color-mix(in srgb,var(--c) 42%,transparent),color-mix(in srgb,var(--c) 12%,transparent));
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--c) 75%,transparent),inset 0 1px 0 rgba(255,255,255,.5),0 6px 18px -6px color-mix(in srgb,var(--c) 75%,transparent)}
+.el i{position:absolute;left:5px;top:4px;font:600 7px/1 var(--mono);font-style:normal;color:rgba(255,255,255,.8)}
+.el b{position:absolute;inset:0;display:grid;place-items:center;padding-top:6px;font:600 15px/1 var(--display);color:#fff;letter-spacing:-.03em}
+.el.sm{width:34px;height:34px;border-radius:8px}
+.el.sm b{font-size:13px;padding-top:5px}
+.el.sm i{font-size:6.5px;left:4px;top:3.5px}
+
+/* avatar */
+.av{--s:48px;position:relative;width:var(--s);height:var(--s);border-radius:50%;overflow:hidden;flex:none;background:#111;
+  box-shadow:0 0 0 1.5px var(--c),0 0 0 4.5px color-mix(in srgb,var(--c) 20%,transparent),0 10px 24px -8px var(--c)}
+.av img{position:absolute;max-width:none}
+
+/* ---------- 01 Cover ---------- */
+.cover-art{position:absolute;left:0;right:0;top:0;height:720px;overflow:hidden;
+  -webkit-mask-image:linear-gradient(#000 52%,rgba(0,0,0,.55) 74%,transparent 100%);mask-image:linear-gradient(#000 52%,rgba(0,0,0,.55) 74%,transparent 100%)}
+.cover-art img{position:absolute;left:50%;top:0;height:100%;width:auto;transform:translateX(-50%) scale(1.13);transform-origin:50% 38%}
+.cover-vig{position:absolute;inset:0;background:radial-gradient(90% 60% at 50% 30%,transparent 40%,rgba(5,8,6,.55) 100%)}
+.cover-top{display:flex;align-items:center;justify-content:space-between;height:44px;padding:0 18px;--r:22px;--blur:16px;
+  font:500 9px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:#fff}
+.cover-top .brand{display:flex;align-items:center;gap:10px}
+.cover-top.glass{background:linear-gradient(160deg,rgba(8,14,11,.28),rgba(8,14,11,.42))}
+.emb-tag{position:absolute;right:58px;top:470px;z-index:3;display:flex;align-items:center;gap:8px;padding:8px 12px;--r:14px;--blur:12px;
+  font:500 8px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#fff}
+.emb-tag.glass{background:linear-gradient(160deg,rgba(8,14,11,.3),rgba(8,14,11,.5))}
+.emb-tag i{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green)}
+.cover-title{margin-top:auto}
+.mega{font:600 104px/.9 var(--display);letter-spacing:-.06em;margin-top:18px;margin-left:-4px}
+.mega span{display:block}
+.mega .spec{background:linear-gradient(92deg,#C4FBDA 0%,#5BE38B 32%,#2ED3B7 58%,#33C3F0 78%,#9B8CFF 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 26px rgba(91,227,139,.35))}
+.tagline{margin-top:18px;font:500 italic 25px/1.2 var(--serif);color:var(--fg2)}
+.cover-info{margin-top:30px;display:grid;grid-template-columns:1.15fr 1fr 1fr;padding:18px 6px;--r:24px}
+.cover-info>div{padding:0 18px;border-left:1px solid rgba(255,255,255,.12)}
+.cover-info>div:first-child{border-left:0}
+.cover-info b{display:block;margin-top:9px;font:600 17px/1.2 var(--text);letter-spacing:-.01em}
+.cover-info .label{font-size:7.6px;letter-spacing:.16em;line-height:1.35;color:var(--fg3)}
+.cover-ft{margin-top:26px;padding-top:0}
+.specline{flex:1;height:2px;border-radius:2px;background:var(--spectrum);opacity:.85;box-shadow:0 0 12px rgba(91,227,139,.4)}
+
+/* ---------- 02 Refraction ---------- */
+.head{margin-top:30px}
+.quote{margin-top:22px;font:300 27px/1.24 var(--display);letter-spacing:-.035em;color:var(--fg);max-width:640px}
+.quote em{font-style:normal;color:var(--mint)}
+.prism-fig{margin:18px -4px 0;position:relative}
+.prism-fig figcaption{margin-top:6px;font-size:10.5px;line-height:1.5;color:var(--fg3);max-width:560px}
+.cols2{columns:2;column-gap:28px;margin-top:28px}
+.cols2 p{break-inside:avoid;margin-bottom:11px}
+.cols2 p.accent{font:500 italic 20px/1.25 var(--serif);color:var(--mint)}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.trio .card{padding:16px 16px 17px}
+.trio .num{font:500 8.5px/1 var(--mono);letter-spacing:.14em;color:var(--fg3)}
+.trio h4{margin-top:22px;font:600 15px/1.15 var(--display);letter-spacing:-.03em}
+.trio p{margin-top:7px;font-size:11.6px;line-height:1.48;color:var(--fg2)}
+.trio .ic{position:absolute;right:14px;top:14px;width:30px;height:30px}
+.toc{margin-top:20px;display:grid;grid-template-columns:auto repeat(6,1fr);align-items:center;gap:0;padding:12px 8px 12px 16px;--r:18px}
+.toc .label{padding-right:12px;color:var(--fg)}
+.toc a{color:inherit;text-decoration:none;display:block;padding:0 9px;border-left:1px solid rgba(255,255,255,.1)}
+.toc a b{display:block;font:600 11px/1 var(--display);color:var(--green)}
+.toc a span{display:block;margin-top:5px;font-size:9.6px;line-height:1.25;color:var(--fg2)}
+
+/* ---------- 03 Green chemistry ---------- */
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.stat{padding:16px 18px 17px}
+.stat .n{font:600 34px/1 var(--display);letter-spacing:-.05em;background:linear-gradient(95deg,#D6FCE5,#5BE38B 60%,#2ED3B7);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat .n small{font-size:15px;letter-spacing:-.02em;margin-left:4px}
+.stat p{margin-top:9px;font-size:11.6px;line-height:1.45;color:var(--fg2)}
+.sub{display:flex;align-items:baseline;justify-content:space-between;margin-top:36px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.1)}
+.sub h3{font:600 17px/1 var(--display);letter-spacing:-.03em}
+.principles{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:12px}
+.pr{position:relative;padding:12px 12px 12px;border-radius:14px;min-height:120px;
+  background:linear-gradient(160deg,color-mix(in srgb,var(--c) 16%,transparent),rgba(255,255,255,.025) 70%);
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--c) 30%,rgba(255,255,255,.06)),inset 0 1px 0 rgba(255,255,255,.18)}
+.pr .no{display:flex;align-items:center;justify-content:space-between;font:600 8.5px/1 var(--mono);letter-spacing:.08em;color:var(--c)}
+.pr .no i{width:6px;height:6px;border-radius:50%;background:var(--c);box-shadow:0 0 8px var(--c)}
+.pr h4{margin-top:10px;font:600 12.2px/1.2 var(--text);letter-spacing:-.005em}
+.pr p{margin-top:5px;font-size:10.2px;line-height:1.38;color:var(--fg3)}
+.src{margin-top:14px;font-size:9.2px;line-height:1.5;color:var(--fg4)}
+
+/* ---------- 04 Traditions & facts ---------- */
+.chem{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:14px}
+.shard{position:relative;height:132px;border-radius:16px;padding:12px 11px;overflow:hidden;
+  background:
+    radial-gradient(90% 60% at 25% 10%,rgba(255,255,255,.55),rgba(255,255,255,0) 55%),
+    linear-gradient(160deg,var(--c),color-mix(in srgb,var(--c) 55%,#000));
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.28),inset 0 -18px 30px -16px rgba(0,0,0,.45),0 18px 36px -18px var(--c)}
+.shard::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:soft-light;
+  background:repeating-radial-gradient(circle at 70% 120%,rgba(255,255,255,.0) 0 9px,rgba(255,255,255,.35) 10px,rgba(255,255,255,0) 12px)}
+.shard .sym{font:600 26px/1 var(--display);letter-spacing:-.04em;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.25)}
+.shard .z{position:absolute;right:10px;top:11px;font:600 8px/1 var(--mono);color:rgba(255,255,255,.8)}
+.shard .nm{position:absolute;left:11px;right:8px;bottom:11px;font:600 11px/1.2 var(--text);color:#fff}
+.shard .nm span{display:block;font:500 9.5px/1.25 var(--text);color:rgba(255,255,255,.82)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px;flex:1;min-height:0}
+.trad{padding:18px 18px 10px;display:flex;flex-direction:column}
+.trad ol{flex:1;display:flex;flex-direction:column;justify-content:space-between}
+.trad h3,.facts h3{font:600 15px/1 var(--display);letter-spacing:-.03em}
+.trad ol{list-style:none;margin-top:8px}
+.trad li{display:grid;grid-template-columns:28px 1fr;gap:8px;padding:11px 0;border-top:1px solid rgba(255,255,255,.08)}
+.trad li:first-child{border-top:0}
+.trad li .i{font:600 9px/1.6 var(--mono);color:var(--green)}
+.trad li b{display:block;font:600 12.6px/1.3 var(--text)}
+.trad li p{margin-top:3px;font-size:11.3px;line-height:1.45;color:var(--fg2)}
+.facts{display:flex;flex-direction:column;gap:12px}
+.facts .fact:last-child{flex:1}
+.fact{padding:16px 18px 17px}
+.fact .label{color:var(--green)}
+.fact h4{margin-top:10px;font:600 14px/1.2 var(--display);letter-spacing:-.03em}
+.fact p{margin-top:7px;font-size:11.4px;line-height:1.5;color:var(--fg2)}
+.cup{display:flex;gap:14px;align-items:center;margin-top:12px}
+.cup .sw{flex:1;height:46px;border-radius:12px;display:flex;align-items:flex-end;padding:7px 9px;font:500 8px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.bigfact{font:600 40px/1 var(--display);letter-spacing:-.05em;color:var(--mint)}
+
+/* ---------- 05-06 Gallery ---------- */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:16px;flex:1;margin-top:18px;min-height:0}
+.win{--c:var(--green);position:relative;border-radius:111px 111px 18px 18px;overflow:hidden;background:#0c0f0d;
+  box-shadow:0 0 0 1px rgba(255,255,255,.16),0 28px 46px -30px color-mix(in srgb,var(--c) 90%,transparent)}
+.win .ph{position:absolute;inset:0;overflow:hidden}
+.win .ph img{position:absolute;max-width:none}
+.win::after{content:"";position:absolute;inset:6px;border-radius:105px 105px 13px 13px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.32);pointer-events:none;z-index:1}
+.win .cap{position:absolute;left:8px;right:8px;bottom:8px;z-index:2;padding:11px 12px 12px;--r:13px;--blur:14px}
+.cap .top{display:flex;align-items:center;gap:9px}
+.cap .role{font:600 7.6px/1.3 var(--mono);letter-spacing:.11em;text-transform:uppercase;color:var(--c)}
+.cap .role em{display:block;font-style:normal;color:rgba(255,255,255,.66)}
+.cap h3{margin-top:9px;font:600 14.5px/1.12 var(--display);letter-spacing:-.035em}
+.cap p{margin-top:6px;font-size:10.6px;line-height:1.42;color:rgba(255,255,255,.84);text-wrap:pretty}
+.gintro{display:flex;flex-direction:column;padding:6px 4px 0}
+.gintro h2{font:600 34px/1 var(--display);letter-spacing:-.05em;margin-top:16px}
+.gintro p{margin-top:14px;font-size:12px;line-height:1.55;color:var(--fg2)}
+.ptable{margin-top:auto;padding:14px 14px 13px;--r:18px}
+.ptable .label{display:block;margin-bottom:10px;font-size:7.5px}
+.ptable .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.ptable .el{width:auto;height:auto;aspect-ratio:1}
+.ptable .el b{font-size:12px;padding-top:4px}
+.ptable .el i{font-size:6px;left:3.5px;top:3px}
+.ptable small{display:block;margin-top:10px;font-size:9.2px;line-height:1.4;color:var(--fg3)}
+.gquote{position:relative;border-radius:111px 111px 18px 18px;display:flex;flex-direction:column;padding:8px 8px 18px;--r:111px 111px 18px 18px}
+.qart{position:relative;height:196px;border-radius:103px 103px 12px 12px;overflow:hidden;flex:none;box-shadow:0 0 0 1px rgba(255,255,255,.28),0 18px 34px -16px rgba(91,227,139,.55)}
+.qart img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;transform:scale(1.32);transform-origin:50% 62%}
+.qt{display:flex;flex-direction:column;flex:1;justify-content:flex-end;padding:0 10px}
+.gquote .q{font:500 italic 22px/1.18 var(--serif);color:#fff}
+.gquote .qm{font:600 54px/0.6 var(--display);color:var(--green);opacity:.9}
+.gquote .label{margin-top:16px;color:var(--fg2);font-size:7.5px;line-height:1.5}
+.gquote .row{display:flex;gap:6px;margin-top:14px}
+.gquote .row span{flex:1;height:5px;border-radius:3px}
+
+/* ---------- 07 Structure ---------- */
+.mentors{display:grid;grid-template-columns:186px 1fr;gap:16px;align-items:center;padding:14px 18px;margin-top:20px;--r:18px}
+.mentors b{display:block;font:600 12.4px/1.2 var(--display);letter-spacing:-.035em;white-space:nowrap}
+.mentors .label{display:block;margin-top:6px;font-size:7.5px}
+.mentors p{font-size:11.2px;line-height:1.48;color:var(--fg2)}
+.tree{position:relative;height:22px}
+.tree::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.15))}
+.leaders{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.lead-card{display:grid;grid-template-columns:64px 1fr;gap:16px;padding:16px 16px 17px;--r:20px}
+.lead-card .av{--s:64px}
+.who .rl,.who .nm{padding-right:40px}
+.who .rl{font:600 15px/1.15 var(--display);letter-spacing:-.035em}
+.who .nm{margin-top:6px;display:flex;align-items:center;gap:8px;font:500 12.2px/1.2 var(--text);color:#fff}
+.nick{display:inline-block;padding:3px 7px;border-radius:20px;font:600 7.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#06110b;background:var(--c)}
+.who p{margin-top:8px;font-size:11px;line-height:1.46;color:var(--fg2)}
+.who .tl{display:block;margin-top:10px;font:500 7.4px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--fg3)}
+.fan{position:relative;height:22px}
+.fan::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.12))}
+.team{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}
+.tcard{display:grid;grid-template-columns:46px 1fr;gap:13px;padding:13px 14px 14px;--r:17px;min-height:110px}
+.tcard .av{--s:46px}
+.tcard .rl{font:600 12.6px/1.15 var(--display);letter-spacing:-.035em}
+.tcard .nm{margin-top:5px;font:500 11.6px/1.2 var(--text);color:#fff;display:flex;align-items:center;gap:7px}
+.tcard .nm i{font:600 7px/1 var(--mono);font-style:normal;color:var(--c);letter-spacing:.06em}
+.tcard p{margin-top:7px;font-size:10.5px;line-height:1.45;color:var(--fg2)}
+.corner{position:absolute;right:12px;top:12px}
+
+/* ---------- 08 Calendar ---------- */
+.legend{display:flex;flex-wrap:nowrap;gap:5px;margin-top:18px}
+.chip{display:flex;align-items:center;gap:6px;padding:6px 9px 6px 7px;border-radius:30px;font:500 9.6px/1 var(--text);color:var(--fg2);white-space:nowrap;
+  background:color-mix(in srgb,var(--k) 12%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--k) 40%,transparent)}
+.chip i{width:8px;height:8px;border-radius:50%;background:var(--k);box-shadow:0 0 8px var(--k)}
+.chip b{font:600 9.5px/1 var(--mono);color:#fff}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:16px}
+.wd{font:500 8px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--fg3);padding:0 2px 2px}
+.day{--k:#888;position:relative;height:138px;border-radius:12px;padding:9px 8px 9px;overflow:hidden;display:flex;flex-direction:column;
+  background:
+    radial-gradient(100% 60% at 20% 0%,rgba(255,255,255,.2),rgba(255,255,255,0) 60%),
+    linear-gradient(165deg,color-mix(in srgb,var(--k) 30%,transparent),color-mix(in srgb,var(--k) 7%,transparent));
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--k) 42%,transparent),inset 0 1px 0 rgba(255,255,255,.25)}
+.day.key{background:
+    radial-gradient(100% 60% at 20% 0%,rgba(255,255,255,.3),rgba(255,255,255,0) 60%),
+    linear-gradient(165deg,color-mix(in srgb,var(--k) 55%,transparent),color-mix(in srgb,var(--k) 16%,transparent));
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--k) 80%,transparent),inset 0 1px 0 rgba(255,255,255,.4),0 10px 26px -12px var(--k)}
+.day .d{font:500 20px/1 var(--display);letter-spacing:-.04em}
+.day .m{position:absolute;right:8px;top:11px;font:500 7px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.day .dot{position:absolute;right:9px;top:10px;width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 10px #fff,0 0 2px #fff}
+.day .t{margin-top:auto;font:500 9.6px/1.27 var(--text);color:rgba(255,255,255,.92);hyphens:manual}
+.day.off{background:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.day.off .d{color:var(--fg4)}
+.day.off::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 7px)}
+.timeline{margin-top:24px;padding:16px 18px 16px;--r:20px}
+.timeline .hd{display:flex;justify-content:space-between;align-items:baseline}
+.timeline .hd b{font:600 13px/1 var(--display);letter-spacing:-.03em}
+.strip{display:grid;grid-template-columns:repeat(24,1fr);gap:3px;height:22px;margin-top:14px}
+.strip span{border-radius:4px;background:var(--k);box-shadow:0 0 12px -3px var(--k),inset 0 1px 0 rgba(255,255,255,.45)}
+.phases{display:grid;grid-template-columns:4fr 4fr 6fr 8fr 2fr;gap:3px;margin-top:8px}
+.phase{position:relative;padding-top:9px}
+.phase::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;border:1px solid rgba(255,255,255,.3);border-top:0;border-radius:0 0 4px 4px}
+.phase b{display:block;font:600 10.4px/1.15 var(--text)}
+.phase span{display:block;margin-top:3px;font:500 7.3px/1.2 var(--mono);letter-spacing:.06em;color:var(--fg3)}
+.phase em{display:block;margin-top:3px;font:500 7.3px/1 var(--mono);font-style:normal;color:var(--fg4)}
+.timeline .note{margin-top:12px;font-size:9.8px;line-height:1.45;color:var(--fg3)}
+
+/* ---------- 09 Back cover ---------- */
+.back-art{position:absolute;left:0;right:0;bottom:0;height:700px;overflow:hidden;
+  -webkit-mask-image:linear-gradient(transparent 0,rgba(0,0,0,.35) 16%,#000 42%);mask-image:linear-gradient(transparent 0,rgba(0,0,0,.35) 16%,#000 42%)}
+.back-art img{position:absolute;left:50%;top:0;height:100%;width:auto;transform:translateX(-50%) scale(1.12);transform-origin:50% 62%}
+.back-head{margin-top:84px}
+.back-head .big{margin-top:18px;font:500 44px/1.06 var(--display);letter-spacing:-.055em;text-wrap:balance}
+.back-head .big .g{background:linear-gradient(95deg,#C4FBDA,#5BE38B 45%,#33C3F0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.back-head .s{margin-top:18px;font:500 italic 22px/1.3 var(--serif);color:var(--fg2);max-width:590px}
+.nums{display:grid;grid-template-columns:repeat(5,1fr);margin-top:44px;padding:20px 6px 20px;--r:24px}
+.nums>div{padding:0 16px;border-left:1px solid rgba(255,255,255,.12)}
+.nums>div:first-child{border-left:0}
+.nums b{display:block;font:600 34px/1 var(--display);letter-spacing:-.05em}
+.nums span{display:block;margin-top:9px;font:500 7.8px/1.35 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--fg3)}
+.back-ft.glass{padding:13px 18px;--r:18px;--blur:14px;color:var(--fg2);background:linear-gradient(160deg,rgba(8,14,11,.35),rgba(8,14,11,.55))}
+</style>
+</head>
+<body>
+
+<!-- SVG defs -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gGreen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C4FBDA"/><stop offset="1" stop-color="#2ED3B7"/></linearGradient>
+  </defs>
+</svg>
+
+<!-- ===================== 01 · COVER ===================== -->
+<section class="page" id="p1">
+  <div class="bgfx">
+    <div class="cover-art"><img src="assets/img/logo.webp" alt=""><div class="cover-vig"></div></div>
+    <div class="orb" style="width:560px;height:430px;left:-200px;top:780px;background:#12a158;opacity:.5"></div>
+    <div class="orb" style="width:520px;height:420px;right:-220px;top:820px;background:#5b3fd6;opacity:.42"></div>
+    <div class="orb" style="width:320px;height:240px;left:280px;top:990px;background:#0fb5b0;opacity:.32"></div>
+  </div>
+  <div class="emb-tag glass"><i></i>Эмблема профиля</div>
+  <div class="pad">
+    <header class="cover-top glass">
+      <span class="brand"><i class="mark"></i>Журнал профиля</span>
+      <span>№ 01</span>
+      <span>Осень 2026</span>
+    </header>
+    <div class="cover-title">
+      <div class="kicker">Профиль «Зелёная химия» представляет</div>
+      <h1 class="mega"><span>Зелёный</span><span class="spec">спектр</span></h1>
+      <p class="tagline">Из осколков моментов — в цельное полотно</p>
+    </div>
+    <div class="cover-info glass prism">
+      <div><span class="label">Образовательное направление</span><b>Зелёная химия</b></div>
+      <div><span class="label">Образовательная смена</span><b>Индустрия будущего</b></div>
+      <div><span class="label">Творческая мастерская</span><b>Преломление</b></div>
+    </div>
+    <footer class="ft cover-ft"><span>28.10 — 20.11.2026</span><span class="specline"></span><span>Национальный детский технопарк</span></footer>
+  </div>
+</section>
+
+<!-- ===================== 02 · REFRACTION ===================== -->
+<section class="page" id="p2">
+  <div class="bgfx">
+    <div class="orb" style="width:520px;height:420px;right:-240px;top:-160px;background:#5b3fd6;opacity:.42"></div>
+    <div class="orb" style="width:520px;height:400px;left:-260px;top:560px;background:#119a55;opacity:.42"></div>
+    <div class="orb" style="width:420px;height:300px;right:-160px;bottom:-60px;background:#0f8fb5;opacity:.38"></div>
+  </div>
+  <div class="pad">
+    <div class="rh"><span class="l"><i class="mark"></i>Зелёный спектр · № 01</span><span>Идея творческой мастерской</span></div>
+    <div class="head">
+      <div class="kicker">Творческая мастерская</div>
+      <h2 class="h1">Преломление</h2>
+    </div>
+    <p class="quote">Витраж — это не просто цветное стекло. <em>Это память.</em></p>
+
+    <figure class="prism-fig">
+      <svg viewBox="0 0 706 262" width="706" height="262">
+        <defs>
+          <linearGradient id="beamIn" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="1"/></linearGradient>
+          <linearGradient id="prismFill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".26"/><stop offset=".55" stop-color="#bff5d6" stop-opacity=".07"/><stop offset="1" stop-color="#fff" stop-opacity=".16"/></linearGradient>
+          <linearGradient id="rayFade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient>
+          <mask id="rayMask" maskUnits="userSpaceOnUse" x="0" y="0" width="706" height="262"><rect x="400" y="0" width="306" height="262" fill="url(#rayFade)"/></mask>
+          <filter id="soft" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="7"/></filter>
+          <filter id="soft2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="22"/></filter>
+        </defs>
+        <!-- halo -->
+        <circle cx="356" cy="150" r="96" fill="#9CF5BF" opacity=".10" filter="url(#soft2)"/>
+        <!-- incoming beam -->
+        <line x1="0" y1="190" x2="303" y2="130" stroke="#fff" stroke-width="10" opacity=".35" filter="url(#soft)"/>
+        <line x1="0" y1="190" x2="303" y2="130" stroke="url(#beamIn)" stroke-width="2.6" stroke-linecap="round"/>
+        <!-- spectrum rays -->
+        <g mask="url(#rayMask)">
+          <g filter="url(#soft)" opacity=".65">
+            <polygon points="410,141 706,150 706,166" fill="#FF4D4D"/>
+            <polygon points="410,141 706,166 706,182" fill="#FF8A3D"/>
+            <polygon points="410,141 706,182 706,198" fill="#FFD23D"/>
+            <polygon points="410,141 706,198 706,214" fill="#5BE38B"/>
+            <polygon points="410,141 706,214 706,230" fill="#33C3F0"/>
+            <polygon points="410,141 706,230 706,246" fill="#3D6BFF"/>
+            <polygon points="410,141 706,246 706,262" fill="#8B5CFF"/>
+          </g>
+          <polygon points="410,141 706,150 706,166" fill="#FF4D4D" opacity=".9"/>
+          <polygon points="410,141 706,166 706,182" fill="#FF8A3D" opacity=".9"/>
+          <polygon points="410,141 706,182 706,198" fill="#FFD23D" opacity=".9"/>
+          <polygon points="410,141 706,198 706,214" fill="#5BE38B" opacity=".9"/>
+          <polygon points="410,141 706,214 706,230" fill="#33C3F0" opacity=".9"/>
+          <polygon points="410,141 706,230 706,246" fill="#3D6BFF" opacity=".9"/>
+          <polygon points="410,141 706,246 706,262" fill="#8B5CFF" opacity=".9"/>
+        </g>
+        <!-- prism -->
+        <polygon points="356,16 252,236 460,236" fill="url(#prismFill)" stroke="rgba(255,255,255,.75)" stroke-width="1.2" stroke-linejoin="round"/>
+        <polyline points="350,34 264,224" fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="1"/>
+        <polyline points="268,230 444,230" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="1"/>
+        <line x1="303" y1="130" x2="410" y2="141" stroke="#fff" stroke-width="2" stroke-opacity=".75"/>
+        <line x1="303" y1="130" x2="410" y2="141" stroke="#fff" stroke-width="8" stroke-opacity=".25" filter="url(#soft)"/>
+        <circle cx="303" cy="130" r="3" fill="#fff"/>
+        <!-- labels -->
+        <g font-family="JetBrains Mono" font-size="8.5" letter-spacing="1.6" fill="rgba(243,246,242,.62)">
+          <text x="2" y="138">СВЕТ</text>
+          <text x="2" y="151" fill="rgba(243,246,242,.4)">ИДЕИ И ОБЩЕЕ ДЕЛО</text>
+          <text x="356" y="256" text-anchor="middle">ПРИЗМА · НАШ ПРОФИЛЬ</text>
+          <text x="704" y="122" text-anchor="end">СПЕКТР</text>
+          <text x="704" y="135" text-anchor="end" fill="rgba(243,246,242,.4)">КАЖДЫЙ ИЗ НАС</text>
+        </g>
+      </svg>
+      <figcaption>Преломление — изменение направления света на границе двух сред. Именно оно позволяет призме разложить белый свет в спектр: это показал Исаак Ньютон в 1660-х годах.</figcaption>
+    </figure>
+
+    <div class="cols2 body">
+      <p>Каждый осколок хранит историю или частичку <span style="white-space:nowrap">чьей-то</span> души. Поодиночке они кажутся случайными фрагментами прошлого, но мы соединяем эти моменты в единое, цельное полотно.</p>
+      <p>Картина оживает, когда сквозь неё проходит свет — свет новых идей, общего дела и энергии тех, кто создаёт будущее прямо сейчас.</p>
+      <p>Именно в технопарке каждый насыщенный день оставляет свой след: встречи с друзьями, радость побед, смелые эксперименты и первые проекты. Давайте вместе превратим эти моменты в нерушимый узор из разноцветных стёкол, чтобы общие воспоминания не растворялись во времени, а продолжали сиять и вдохновлять на новые прорывы.</p>
+      <p class="accent">А мы вам в этом поможем!</p>
+    </div>
+
+    <div class="trio">
+      <div class="glass card">
+        <svg class="ic" viewBox="0 0 30 30"><polygon points="4,24 12,5 26,10 22,26" fill="none" stroke="#5BE38B" stroke-width="1.4" stroke-linejoin="round"/><polygon points="12,5 26,10 16,15" fill="#5BE38B" fill-opacity=".35"/></svg>
+        <span class="num">01 · СТЕКЛО</span>
+        <h4>Осколок</h4>
+        <p>Каждый из нас: свой цвет, свой характер и своя история.</p>
+      </div>
+      <div class="glass card">
+        <svg class="ic" viewBox="0 0 30 30"><path d="M3 9 H27 M3 21 H27 M11 3 V27 M19 3 V27" stroke="#33C3F0" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg>
+        <span class="num">02 · СВИНЦОВЫЙ ПРОФИЛЬ</span>
+        <h4>Связь</h4>
+        <p>То, что соединяет осколки в узор: общее дело, традиции и дружба.</p>
+      </div>
+      <div class="glass card">
+        <svg class="ic" viewBox="0 0 30 30"><circle cx="15" cy="15" r="5" fill="#FFC43D"/><path d="M15 2V7M15 23V28M2 15H7M23 15H28M5.8 5.8L9.3 9.3M20.7 20.7L24.2 24.2M5.8 24.2L9.3 20.7M20.7 9.3L24.2 5.8" stroke="#FFC43D" stroke-width="1.4" stroke-linecap="round"/></svg>
+        <span class="num">03 · СВЕТ</span>
+        <h4>Идеи</h4>
+        <p>Энергия, которая проходит сквозь стекло и делает узор живым.</p>
+      </div>
+    </div>
+
+    <nav class="toc glass">
+      <span class="label">В номере</span>
+      <a><b>02</b><span>Мастерская «Преломление»</span></a>
+      <a><b>03</b><span>Зелёная химия</span></a>
+      <a><b>04</b><span>Традиции и факты</span></a>
+      <a><b>05</b><span>Лица профиля</span></a>
+      <a><b>07</b><span>Самоуправление</span></a>
+      <a><b>08</b><span>Календарь смены</span></a>
+    </nav>
+
+    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">02 <span>/ 09</span></span></div>
+  </div>
+</section>
+
+<!-- ===================== 03 · GREEN CHEMISTRY ===================== -->
+<section class="page" id="p3">
+  <div class="bgfx">
+    <div class="orb" style="width:600px;height:460px;left:-260px;top:-180px;background:#12a158;opacity:.45"></div>
+    <div class="orb" style="width:480px;height:380px;right:-240px;top:420px;background:#0fb5b0;opacity:.32"></div>
+    <div class="orb" style="width:520px;height:380px;left:-180px;bottom:-200px;background:#3f5bd6;opacity:.3"></div>
+  </div>
+  <div class="pad">
+    <div class="rh"><span class="l"><i class="mark"></i>Зелёный спектр · № 01</span><span>Информация о профиле</span></div>
+    <div class="head">
+      <div class="kicker">Образовательное направление</div>
+      <h2 class="h1"><span class="g">Зелёная</span> химия</h2>
+    </div>
+    <p class="lead" style="margin-top:18px">Химия, которая отвечает за последствия. Её задача — создавать вещества и процессы, в которых меньше опасных веществ и отходов и больше пользы для людей и планеты.</p>
+
+    <div class="stats">
+      <div class="glass stat"><div class="n">12</div><p>принципов зелёной химии сформулировали Пол Анастас и Джон Уорнер в 1998 году. Это наша «таблица умножения».</p></div>
+      <div class="glass stat"><div class="n">2005</div><p>Нобелевская премия по химии за метатезис. Нобелевский комитет назвал открытие «большим шагом вперёд для зелёной химии».</p></div>
+      <div class="glass stat"><div class="n">25–100<small>+ кг</small></div><p>отходов приходится на 1 кг лекарства в фармацевтике (E-фактор Роджера Шелдона). Зелёная химия учит уменьшать это число.</p></div>
+      <div class="glass stat"><div class="n">24<small>дня</small></div><p>длилась первая смена Национального детского технопарка в 2021 году. «Зелёная химия» была одним из трёх её направлений.</p></div>
+    </div>
+
+    <div class="sub"><h3>12 принципов зелёной химии</h3><span class="label">П. Анастас, Дж. Уорнер · 1998</span></div>
+    <div class="principles" id="principles"></div>
+
+    <p class="src">Источники: P. T. Anastas, J. C. Warner. Green Chemistry: Theory and Practice (1998); пресс-релиз Нобелевского комитета (2005); R. A. Sheldon, E-factor; «Знамя юности», «Тридцать первых» (04.02.2021).</p>
+    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">03 <span>/ 09</span></span></div>
+  </div>
+</section>
+
+<!-- ===================== 04 · TRADITIONS & FACTS ===================== -->
+<section class="page" id="p4">
+  <div class="bgfx">
+    <div class="orb" style="width:560px;height:420px;right:-260px;top:-160px;background:#c2185b;opacity:.3"></div>
+    <div class="orb" style="width:540px;height:420px;left:-260px;top:300px;background:#1f4fe0;opacity:.3"></div>
+    <div class="orb" style="width:560px;height:420px;right:-240px;bottom:-180px;background:#12a158;opacity:.38"></div>
+  </div>
+  <div class="pad">
+    <div class="rh"><span class="l"><i class="mark"></i>Зелёный спектр · № 01</span><span>Информация о профиле</span></div>
+    <div class="head">
+      <div class="kicker">Традиции и интересные факты</div>
+      <h2 class="h1">Химия <span class="g">цвета</span></h2>
+    </div>
+    <p class="lead" style="margin-top:16px">Витраж и химия связаны напрямую: цвет стеклу дают ионы и наночастицы металлов. Они поглощают одни длины волн света и пропускают другие — то, что прошло сквозь стекло, мы и видим как цвет.</p>
+
+    <div class="chem">
+      <div class="shard" style="--c:#1F4FE0"><div class="sym">Co</div><div class="z">27</div><div class="nm">Кобальт<span>синий</span></div></div>
+      <div class="shard" style="--c:#13A889"><div class="sym">Cu</div><div class="z">29</div><div class="nm">Медь<span>бирюзовый</span></div></div>
+      <div class="shard" style="--c:#1E9E4A"><div class="sym">Cr</div><div class="z">24</div><div class="nm">Хром<span>изумрудный</span></div></div>
+      <div class="shard" style="--c:#C4123E"><div class="sym">Au</div><div class="z">79</div><div class="nm">Золото<span>рубиновый</span></div></div>
+      <div class="shard" style="--c:#7B3FE4"><div class="sym">Mn</div><div class="z">25</div><div class="nm">Марганец<span>фиолетовый</span></div></div>
+      <div class="shard" style="--c:#E8A90C"><div class="sym">Ag</div><div class="z">47</div><div class="nm">Серебро<span>жёлтый</span></div></div>
+    </div>
+
+    <div class="two">
+      <div class="glass trad">
+        <h3>Наши традиции</h3>
+        <ol>
+          <li><span class="i">01</span><div><b>Корпоративный совет</b><p>Генеральный директор представляет интересы профиля на «Корпоративном совете», а затем распределяет поручения внутри команды.</p></div></li>
+          <li><span class="i">02</span><div><b>Общая копилка технобаллов</b><p>Каждый балл на счету: финансовый менеджер ведёт учёт и вместе с командой продумывает стратегию успеха.</p></div></li>
+          <li><span class="i">03</span><div><b>Спорт-минутки</b><p>Спорт-менеджер не даёт засидеться: разминки и тренировки перед соревнованиями — часть нашего дня.</p></div></li>
+          <li><span class="i">04</span><div><b>Четыре коворкинга</b><p>Время, когда весь профиль работает над проектами вместе. На втором коворкинге — релиз.</p></div></li>
+          <li><span class="i">05</span><div><b>Каждый — витраж</b><p>Мы превратили свои портреты в витражи: так каждый стал осколком общего узора мастерской «Преломление».</p></div></li>
+        </ol>
+      </div>
+      <div class="facts">
+        <div class="glass fact">
+          <span class="label">Факт № 1 · Нанотехнологии Древнего Рима</span>
+          <h4>Кубок Ликурга</h4>
+          <p>Римский кубок IV века в отражённом свете выглядит зелёным, а на просвет — красным. Секрет — наночастицы золота и серебра в стекле: нанотехнологии за 1600 лет до появления самого слова.</p>
+          <div class="cup">
+            <div class="sw" style="background:linear-gradient(150deg,#7fd99a,#1e7a46);color:#06200f">отражение</div>
+            <div class="sw" style="background:linear-gradient(150deg,#ff7a6b,#9e1230);color:#2a0308">на просвет</div>
+          </div>
+        </div>
+        <div class="glass fact">
+          <span class="label">Факт № 2 · Стекло и экология</span>
+          <div class="bigfact" style="margin-top:12px">∞</div>
+          <p>Стекло можно переплавлять снова и снова без потери качества. Каждые 10 % стеклобоя в шихте снижают затраты энергии на плавку примерно на 2–3 %.</p>
+        </div>
+        <div class="glass fact">
+          <span class="label">Факт № 3 · Рецепт стекла</span>
+          <h4>Песок, сода и известняк</h4>
+          <p>Обычное оконное стекло примерно на 70 % состоит из кварцевого песка (SiO<sub style="font-size:.75em;line-height:0">2</sub>), остальное — в основном оксиды натрия и кальция из соды и известняка. Металлы-красители добавляют в шихту перед плавкой.</p>
+        </div>
+      </div>
+    </div>
+    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">04 <span>/ 09</span></span></div>
+  </div>
+</section>
+
+<!-- ===================== 05 · GALLERY I ===================== -->
+<section class="page" id="p5">
+  <div class="bgfx">
+    <div class="orb" style="width:520px;height:420px;left:-240px;top:-120px;background:#12a158;opacity:.4"></div>
+    <div class="orb" style="width:520px;height:420px;right:-240px;top:420px;background:#5b3fd6;opacity:.32"></div>
+    <div class="orb" style="width:520px;height:380px;left:-200px;bottom:-200px;background:#c2185b;opacity:.25"></div>
+  </div>
+  <div class="pad">
+    <div class="rh"><span class="l"><i class="mark"></i>Зелёный спектр · № 01</span><span>Фотогалерея · 01—05</span></div>
+    <div class="gal" id="gal1">
+      <div class="gintro">
+        <div class="kicker">Фотогалерея</div>
+        <h2>Лица<br>профиля</h2>
+        <p>Десять человек — десять осколков одного витража. Каждый портрет мы превратили в витражное стекло.</p>
+        <p style="margin-top:8px">Порядок — по алфавиту фамилий, как в списке профиля.</p>
+        <div class="glass ptable">
+          <span class="label">Периодическая система профиля</span>
+          <div class="grid" id="ptable"></div>
+          <small>Номер — порядок в списке. Символ — наш «химический элемент».</small>
+        </div>
+      </div>
+    </div>
+    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">05 <span>/ 09</span></span></div>
+  </div>
+</section>
+
+<!-- ===================== 06 · GALLERY II ===================== -->
+<section class="page" id="p6">
+  <div class="bgfx">
+    <div class="orb" style="width:520px;height:420px;right:-240px;top:-140px;background:#0fb5b0;opacity:.34"></div>
+    <div class="orb" style="width:520px;height:420px;left:-260px;top:380px;background:#e0861f;opacity:.22"></div>
+    <div class="orb" style="width:360px;height:360px;right:-40px;bottom:40px;background:#12a158;opacity:.6"></div>
+    <div class="orb" style="width:260px;height:260px;right:120px;bottom:240px;background:#5b3fd6;opacity:.5"></div>
+  </div>
+  <div class="pad">
+    <div class="rh"><span class="l"><i class="mark"></i>Зелёный спектр · № 01</span><span>Фотогалерея · 06—10</span></div>
+    <div class="gal" id="gal2"></div>
+    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">06 <span>/ 09</span></span></div>
+  </div>
+</section>
+
+<!-- ===================== 07 · STRUCTURE ===================== -->
+<section class="page" id="p7">
+  <div class="bgfx">
+    <div class="orb" style="width:560px;height:420px;left:-240px;top:-160px;background:#12a158;opacity:.4"></div>
+    <div class="orb" style="width:560px;height:440px;right:-260px;top:300px;background:#3f5bd6;opacity:.32"></div>
+    <div class="orb" style="width:560px;height:420px;left:-240px;bottom:-160px;background:#7b3fe4;opacity:.3"></div>
+  </div>
+  <div class="pad">
+    <div class="rh"><span class="l"><i class="mark"></i>Зелёный спектр · № 01</span><span>Структура самоуправления</span></div>
+    <div class="head" style="margin-top:26px">
+      <div class="kicker">Структура самоуправления</div>
+      <h2 class="h1" style="font-size:44px">Корпорация<br><span class="g">«Зелёная химия»</span></h2>
+    </div>
+    <p class="lead" style="margin-top:14px;font-size:14.5px">На смене «Индустрия будущего» профиль работает как настоящая компания: у каждого своя должность и зона ответственности. По отдельности — элементы, вместе — устойчивое соединение.</p>
+
+    <div class="glass mentors">
+      <div><b>Тимлидеры-инвесторы</b><span class="label">Наставники профиля</span></div>
+      <p>Руководят деятельностью стартап-центра, направляют учащихся при выборе содержания деятельности, создают ситуацию успеха и мотивируют на результат.</p>
+    </div>
+    <div class="tree"></div>
+    <div class="leaders" id="leaders"></div>
+    <div class="fan"></div>
+    <div class="team" id="team"></div>
+    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">07 <span>/ 09</span></span></div>
+  </div>
+</section>
+
+<!-- ===================== 08 · CALENDAR ===================== -->
+<section class="page" id="p8">
+  <div class="bgfx">
+    <div class="orb" style="width:560px;height:420px;right:-260px;top:-160px;background:#7b3fe4;opacity:.36"></div>
+    <div class="orb" style="width:560px;height:420px;left:-280px;top:420px;background:#12a158;opacity:.36"></div>
+    <div class="orb" style="width:520px;height:380px;right:-220px;bottom:-180px;background:#0f8fb5;opacity:.34"></div>
+  </div>
+  <div class="pad">
+    <div class="rh"><span class="l"><i class="mark"></i>Зелёный спектр · № 01</span><span>Календарь событий профиля</span></div>
+    <div class="head" style="margin-top:26px">
+      <div class="kicker">Календарь смены</div>
+      <h2 class="h1" style="font-size:46px">24 дня — <span class="g">24 события</span></h2>
+    </div>
+    <p class="lead" style="margin-top:12px;font-size:14.5px">С 28 октября по 20 ноября 2026 года. Каждый день смены — ещё один осколок нашего витража, а весь календарь — витраж целиком.</p>
+    <div class="legend" id="legend"></div>
+    <div class="cal" id="cal"></div>
+    <div class="glass timeline">
+      <div class="hd"><b>Как растёт команда</b><span class="label">Модель Брюса Такмана</span></div>
+      <div class="strip" id="strip"></div>
+      <div class="phases">
+        <div class="phase"><b>Знакомство</b><span>формирование</span><em>28.10—31.10</em></div>
+        <div class="phase"><b>Притирка</b><span>«шторм»</span><em>01.11—04.11</em></div>
+        <div class="phase"><b>Сплочение</b><span>нормирование</span><em>05.11—10.11</em></div>
+        <div class="phase"><b>Результат</b><span>функционирование</span><em>11.11—18.11</em></div>
+        <div class="phase"><b>Финал</b><span>завершение</span><em>19—20.11</em></div>
+      </div>
+      <p class="note">Психолог Брюс Такман описал стадии, через которые проходит любая команда (1965, 1977). Так их можно наложить на нашу смену: от первого знакомства до общего финала.</p>
+    </div>
+    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">08 <span>/ 09</span></span></div>
+  </div>
+</section>
+
+<!-- ===================== 09 · BACK COVER ===================== -->
+<section class="page" id="p9">
+  <div class="bgfx">
+    <div class="orb" style="width:560px;height:420px;left:-240px;top:-160px;background:#12a158;opacity:.42"></div>
+    <div class="orb" style="width:520px;height:400px;right:-240px;top:120px;background:#5b3fd6;opacity:.36"></div>
+    <div class="back-art"><img src="assets/img/logo.webp" alt=""></div>
+  </div>
+  <div class="pad">
+    <div class="rh"><span class="l"><i class="mark"></i>Зелёный спектр · № 01</span><span>Мастерская «Преломление»</span></div>
+    <div class="back-head">
+      <div class="kicker">Вместо послесловия</div>
+      <p class="big">Каждый осколок хранит историю. <span class="g">Вместе мы — свет.</span></p>
+      <p class="s">Поодиночке осколки кажутся случайными. Сложенные вместе, они становятся витражом, сквозь который проходит свет будущего.</p>
+    </div>
+    <div class="glass prism nums">
+      <div><b>10</b><span>участников</span></div>
+      <div><b>10</b><span>ролей</span></div>
+      <div><b>24</b><span>дня смены</span></div>
+      <div><b>24</b><span>события</span></div>
+      <div><b>1</b><span>общий витраж</span></div>
+    </div>
+    <div class="ft glass back-ft"><span class="l"><i class="mark"></i>«Зелёный спектр» · журнал профиля «Зелёная химия» · Национальный детский технопарк, 2026</span><span class="pn">09 <span>/ 09</span></span></div>
+  </div>
+</section>
+
+<script src="data/people.example.js"></script>
+<script src="data/people.js"></script>
+<script>
+/* ---------------- Data ----------------
+   P (участники) задаётся в data/people.js (приватный, в .gitignore);
+   без него используется шаблон data/people.example.js. */
+const COL = n => `var(--c${n})`;
+const pad2 = n => String(n).padStart(2,'0');
+const el = (p, cls='') => `<div class="el ${cls}" style="--c:${COL(p.n)}"><i>${p.n}</i><b>${p.sym}</b></div>`;
+
+/* principles */
+const PR = [
+  ['Предотвращение отходов','Не создавать отходы проще, чем перерабатывать их'],
+  ['Атомная экономия','Максимум атомов сырья — в конечный продукт'],
+  ['Менее опасный синтез','Как можно меньше вредных веществ в процессе'],
+  ['Безопасные продукты','Та же польза при меньшей токсичности'],
+  ['Безопасные растворители','Меньше вспомогательных веществ — и только безвредные'],
+  ['Энерго­эффективность','Комнатная температура и обычное давление'],
+  ['Возобновляемое сырьё','Вместо исчерпаемых ресурсов, где это возможно'],
+  ['Меньше лишних стадий','Без ненужных промежуточных продуктов'],
+  ['Катализ','Селективный катализатор вместо избытка реагентов'],
+  ['Безопасное разложение','После использования — на безопасные вещества'],
+  ['Контроль в реальном времени','Замечать опасность до того, как она возникнет'],
+  ['Предотвращение аварий','Минимум риска утечек, взрывов и пожаров'],
+];
+const prCols = ['#5BE38B','#4FD9A0','#2ED3B7','#33C3F0','#4FA8FF','#4D8BFF','#7B6CFF','#A07BFF','#C56CFF','#FF6F91','#FF8A3D','#FFC43D'];
+document.getElementById('principles').innerHTML = PR.map((p,i)=>
+  `<div class="pr" style="--c:${prCols[i]}"><div class="no">${pad2(i+1)}<i></i></div><h4>${p[0]}</h4><p>${p[1]}</p></div>`).join('');
+
+/* gallery */
+const win = p => `<article class="win" style="--c:${COL(p.n)}" data-n="${p.n}">
+  <div class="ph"><img src="assets/img/people/${p.img}.webp" alt="${p.first} ${p.last}"></div>
+  <div class="cap glass dark">
+    <div class="top">${el(p,'sm')}<div class="role">${p.role}${p.nick?`<em>«${p.nick}»</em>`:''}</div></div>
+    <h3>${p.first}<br>${p.last}</h3>
+    <p>${p.cap}</p>
+  </div></article>`;
+document.getElementById('gal1').insertAdjacentHTML('beforeend', P.slice(0,5).map(win).join(''));
+document.getElementById('gal2').innerHTML = P.slice(5,10).map(win).join('') +
+  `<div class="glass prism gquote"><div class="qart"><img src="assets/img/logo.webp" alt=""></div><div class="qt"><div class="qm">“</div><p class="q">Поодиночке осколки кажутся случайными. Вместе — это витраж.</p>
+   <span class="label">Мастерская «Преломление»</span>
+   <div class="row">${P.map(p=>`<span style="background:${COL(p.n)};box-shadow:0 0 8px ${COL(p.n)}"></span>`).join('')}</div></div></div>`;
+document.getElementById('ptable').innerHTML = P.map(p=>el(p)).join('');
+
+/* structure */
+const byRole = r => P.find(p=>p.role===r);
+const leadersHTML = ['Генеральный директор','Операционный менеджер'].map(r=>{const p=byRole(r);return `
+  <div class="glass lead-card" style="--c:${COL(p.n)}">
+    <div class="av" data-n="${p.n}"><img src="assets/img/people/${p.img}.webp" alt=""></div>
+    <div class="who"><div class="rl">${p.role}</div>
+      <div class="nm">${p.first} ${p.last}<span class="nick">${p.nick}</span></div>
+      <span class="tl">Задачи</span><p>${p.task}</p></div>
+    <div class="corner">${el(p,'sm')}</div>
+  </div>`}).join('');
+document.getElementById('leaders').innerHTML = leadersHTML;
+const order = ['Финансовый менеджер','Бренд-менеджер','Дизайнер продукта','Тестировщик','Медиа-продюсер','Спорт-менеджер','СММ-специалист','Менеджер проекта'];
+document.getElementById('team').innerHTML = order.map(r=>{const p=byRole(r);return `
+  <div class="glass tcard" style="--c:${COL(p.n)}">
+    <div class="av" data-n="${p.n}"><img src="assets/img/people/${p.img}.webp" alt=""></div>
+    <div class="who"><div class="rl">${p.role}</div>
+      <div class="nm">${p.first} ${p.last}</div>
+      <p>${p.task}</p></div>
+    <div class="corner">${el(p,'sm')}</div>
+  </div>`}).join('');
+
+/* calendar */
+const K = {proj:['Проекты и коворкинги','var(--k-proj)'], art:['Сцена и творчество','var(--k-art)'], common:['События технопарка','var(--k-common)'], sport:['Спорт','var(--k-sport)'], fun:['Дискотеки','var(--k-fun)']};
+const EV = {
+  '10-28':['Техно-кросс','sport'], '10-29':['Техно-индустрия','common'], '10-30':['Деловая игра «Корпорация»','proj'],
+  '10-31':['Дискотека «Привет, технопарк»','fun'], '11-01':['Коворкинг № 1','proj'], '11-02':['Киноклуб «Наше кино»','art'],
+  '11-03':['Перформанс','art'], '11-04':['Коворкинг № 2. Релиз','proj',1], '11-05':['Спектакль «Ефросиния Полоцкая»','art'],
+  '11-06':['«Поток»','common'], '11-07':['Коворкинг № 3','proj'], '11-08':['Соревнования «Волейбол»','sport'],
+  '11-09':['Интеграция','common'], '11-10':['Коворкинг № 4','proj'], '11-11':['Мастер-класс музея народной архитек­туры и быта','proj'],
+  '11-12':['Единый день информи­рования','common'], '11-13':['Генеральная репетиция «Синергии»','art'], '11-14':['Дискотека «В кругу друзей»','fun'],
+  '11-15':['Тимлидерский концерт','art'], '11-16':['«Синергия»','art',1], '11-17':['Генеральная репетиция фестиваля «Шум»','art'],
+  '11-18':['Фестиваль детского творчества «Шум»','art',1], '11-19':['Торжественное закрытие образо­вательной смены','common',1], '11-20':['Акция «Чистый технодом»','common'],
+};
+const counts = {}; Object.values(EV).forEach(e=>counts[e[1]]=(counts[e[1]]||0)+1);
+document.getElementById('legend').innerHTML = ['art','proj','common','sport','fun'].map(k=>
+  `<span class="chip" style="--k:${K[k][1]}"><i></i>${K[k][0]}<b>${counts[k]}</b></span>`).join('') +
+  `<span class="chip" style="--k:#ffffff"><i></i>главные</span>`;
+const wd = ['Пн','Вт','Ср','Чт','Пт','Сб','Вс'];
+let cal = wd.map(d=>`<div class="wd">${d}</div>`).join('');
+const start = new Date(2026,9,26); // Mon 26.10.2026
+const strip = [];
+for (let i=0;i<28;i++){
+  const d = new Date(start); d.setDate(start.getDate()+i);
+  const key = pad2(d.getMonth()+1)+'-'+pad2(d.getDate());
+  const e = EV[key];
+  const mon = d.getMonth()===9?'окт':'ноя';
+  if(!e){ cal += `<div class="day off"><div class="d">${d.getDate()}</div><div class="m">${mon}</div></div>`; continue; }
+  strip.push(K[e[1]][1]);
+  const showMon = (key==='10-28'||key==='11-01');
+  cal += `<div class="day ${e[2]?'key':''}" style="--k:${K[e[1]][1]}"><div class="d">${d.getDate()}</div>${e[2]?'<i class="dot"></i>':(showMon?`<div class="m">${mon}</div>`:'')}<div class="t">${e[0]}</div></div>`;
+}
+document.getElementById('cal').innerHTML = cal;
+document.getElementById('strip').innerHTML = strip.map(c=>`<span style="--k:${c}"></span>`).join('');
+
+/* ---------------- Typography: non-breaking spaces ---------------- */
+function nbsp(root){
+  const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  let n; const short = /(^|[\s«(„"—])([А-ЯЁа-яёA-Za-z]{1,2}|\d+|№)\s+(?=\S)/g;
+  while((n=w.nextNode())){
+    if(n.parentNode.closest('style,script')) continue;
+    let t = n.nodeValue;
+    t = t.replace(/ — /g,' — ');
+    t = t.replace(short,'$1$2 ').replace(short,'$1$2 ');
+    n.nodeValue = t;
+  }
+}
+document.querySelectorAll('.page').forEach(nbsp);
+
+/* ---------------- Smart crops ---------------- */
+function placeImg(img, cw, ch, fx, fy, scale, tx, ty){
+  const iw = img.naturalWidth, ih = img.naturalHeight;
+  const W = iw*scale, H = ih*scale;
+  let left = tx*cw - fx*W, top = ty*ch - fy*H;
+  left = Math.min(0, Math.max(cw-W, left)); top = Math.min(0, Math.max(ch-H, top));
+  Object.assign(img.style,{width:W+'px',height:H+'px',left:left+'px',top:top+'px'});
+}
+async function crops(){
+  const imgs=[...document.images]; await Promise.all(imgs.map(i=>i.decode().catch(()=>{})));
+  document.querySelectorAll('.win').forEach(w=>{
+    const p=P[w.dataset.n-1], img=w.querySelector('img'), r=w.getBoundingClientRect();
+    const s0=Math.max(r.width/img.naturalWidth, r.height/img.naturalHeight)*(p.gz||1);
+    placeImg(img,r.width,r.height,p.face[0],p.face[1],s0,.5,.32);
+  });
+  document.querySelectorAll('.av').forEach(a=>{
+    const p=P[a.dataset.n-1], img=a.querySelector('img'), r=a.getBoundingClientRect();
+    const s=Math.max(r.width/img.naturalWidth, r.height/img.naturalHeight, (0.66*r.width)/(p.face[2]*img.naturalWidth));
+    placeImg(img,r.width,r.height,p.face[0],p.face[1],s,.5,.5);
+  });
+}
+(async()=>{ await document.fonts.ready;
+  await Promise.all(['600 20px Unbounded','400 13px Onest','500 10px "JetBrains Mono"','italic 500 20px "Cormorant Garamond"'].map(f=>document.fonts.load(f,'АаЁё')));
+  await crops(); window.__ready=true; })();
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# Личные данные участников — не публикуются (репозиторий публичный)
+journal/assets/img/people/
+journal/data/people.js
+*.pdf
+
+# Сборка
+build/
+node_modules/
