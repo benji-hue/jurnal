@@ -146,9 +146,9 @@ img{display:block}
 
 /* ---------- 03 Green chemistry ---------- */
 .p3lead{margin-top:18px;font:400 17px/1.55 var(--text);color:var(--fg);text-wrap:pretty}
-.group{position:relative;margin-top:24px;height:512px;border-radius:24px;overflow:hidden;background:#0c0f0d;
+.group{position:relative;margin-top:22px;height:468px;border-radius:24px;overflow:hidden;background:#0c0f0d;
   box-shadow:0 0 0 1px rgba(255,255,255,.16),0 30px 60px -30px rgba(91,227,139,.5)}
-.group img{width:100%;height:100%;object-fit:cover;object-position:50% 28%}
+.group img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
 .group::before{content:"";position:absolute;left:0;right:0;bottom:0;height:42%;z-index:1;background:linear-gradient(rgba(5,8,6,0),rgba(5,8,6,.5))}
 .group::after{content:"";position:absolute;inset:6px;border-radius:19px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.3);pointer-events:none;z-index:2}
 .gcap{position:absolute;left:14px;bottom:14px;z-index:3;padding:11px 15px 12px;--r:14px;--blur:14px}
@@ -158,6 +158,11 @@ img{display:block}
 .p3cols>div{padding-top:14px;border-top:1px solid rgba(255,255,255,.14)}
 .p3cols .label{color:var(--green)}
 .p3cols p{margin-top:9px;font-size:13px;line-height:1.55;color:var(--fg2)}
+.p3cols .label.second{display:block;margin-top:16px}
+.p3cols ul{list-style:none;margin-top:6px}
+.p3cols li{position:relative;padding-left:15px;margin-top:5px;font-size:12.8px;line-height:1.45;color:var(--fg2)}
+.p3cols li::before{content:"";position:absolute;left:1px;top:7px;width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green)}
+.p3cols p.note{margin-top:10px;font-size:11.5px;line-height:1.45;color:var(--fg3)}
 .src{margin-top:14px;font-size:10.5px;line-height:1.5;color:var(--fg4)}
 
 /* ---------- 04 Traditions & facts ---------- */
@@ -488,8 +493,16 @@ img{display:block}
     </figure>
 
     <div class="p3cols">
-      <div><span class="label">Шире химии</span><p>Идеи зелёной химии выходят за рамки собственно химии и распространяются на различные области — от энергетики до устойчивого развития общества.</p></div>
-      <div><span class="label">Программы направления</span><p>«Зелёная химия» и «Зелёный химический синтез». Вторая объединяет неорганическую и органическую химию, биохимию и другие разделы, чтобы с помощью принципов зелёной химии совершенствовать химические процессы.</p></div>
+      <div><span class="label">Что изучают на программе «Зелёная химия»</span>
+        <ul>
+          <li>принципы зелёной химии и зелёных технологий;</li>
+          <li>водные ресурсы мира и Беларуси, методы очистки воды;</li>
+          <li>виды полимерных материалов и загрязнение природы пластиком;</li>
+          <li>получение биоразлагаемых плёнок и покрытий для упаковки продуктов.</li>
+        </ul>
+        <p class="note">Программа реализуется при содействии Белорусского государственного университета.</p></div>
+      <div><span class="label">Шире химии</span><p>Идеи зелёной химии выходят за рамки собственно химии и распространяются на различные области — от энергетики до устойчивого развития общества.</p>
+        <span class="label second">Все программы направления</span><p>«Зелёная химия», «Зелёный химический синтез», «Зелёные технологии в косметической, медицинской химии и молекулярной гастрономии», «Химия биологически активных природных соединений».</p></div>
     </div>
 
     <p class="src">По материалам сайта Национального детского технопарка, ndtp.by</p>
