@@ -145,20 +145,20 @@ img{display:block}
 .toc a span{display:block;margin-top:6px;font-size:11px;line-height:1.3;color:var(--fg2)}
 
 /* ---------- 03 Green chemistry ---------- */
-.stats{display:grid;grid-template-columns:1fr 1fr;column-gap:34px;margin-top:24px}
-.stat{padding:16px 0 18px;border-top:1px solid rgba(255,255,255,.14)}
-.stat .n{font:600 36px/1 var(--display);letter-spacing:-.05em;background:linear-gradient(95deg,#D6FCE5,#5BE38B 60%,#2ED3B7);-webkit-background-clip:text;background-clip:text;color:transparent}
-.stat .n small{font-size:15px;letter-spacing:-.02em;margin-left:4px}
-.stat p{margin-top:10px;font-size:12.8px;line-height:1.5;color:var(--fg2)}
-.sub{display:flex;align-items:baseline;justify-content:space-between;margin-top:22px;padding-bottom:6px}
-.sub h3{font:600 18px/1 var(--display);letter-spacing:-.03em}
-.principles{display:grid;grid-template-columns:repeat(3,1fr);column-gap:24px;margin-top:6px}
-.pr{padding:13px 0 14px;border-top:1px solid color-mix(in srgb,var(--c) 45%,rgba(255,255,255,.08))}
-.pr .no{display:flex;align-items:center;gap:8px;font:600 10px/1 var(--mono);letter-spacing:.08em;color:var(--c)}
-.pr .no i{width:6px;height:6px;border-radius:50%;background:var(--c);box-shadow:0 0 8px var(--c)}
-.pr h4{margin-top:8px;font:600 13.6px/1.25 var(--text);letter-spacing:-.005em}
-.pr p{margin-top:4px;font-size:12px;line-height:1.42;color:rgba(243,246,242,.68)}
-.src{margin-top:10px;font-size:10.5px;line-height:1.5;color:var(--fg4)}
+.p3lead{margin-top:18px;font:400 17px/1.55 var(--text);color:var(--fg);text-wrap:pretty}
+.group{position:relative;margin-top:24px;height:512px;border-radius:24px;overflow:hidden;background:#0c0f0d;
+  box-shadow:0 0 0 1px rgba(255,255,255,.16),0 30px 60px -30px rgba(91,227,139,.5)}
+.group img{width:100%;height:100%;object-fit:cover;object-position:50% 28%}
+.group::before{content:"";position:absolute;left:0;right:0;bottom:0;height:42%;z-index:1;background:linear-gradient(rgba(5,8,6,0),rgba(5,8,6,.5))}
+.group::after{content:"";position:absolute;inset:6px;border-radius:19px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.3);pointer-events:none;z-index:2}
+.gcap{position:absolute;left:14px;bottom:14px;z-index:3;padding:11px 15px 12px;--r:14px;--blur:14px}
+.gcap b{display:block;font:600 15px/1.1 var(--display);letter-spacing:-.035em}
+.gcap span{display:block;margin-top:5px;font-size:12px;line-height:1.3;color:rgba(255,255,255,.82)}
+.p3cols{display:grid;grid-template-columns:1fr 1fr;column-gap:34px;margin-top:24px}
+.p3cols>div{padding-top:14px;border-top:1px solid rgba(255,255,255,.14)}
+.p3cols .label{color:var(--green)}
+.p3cols p{margin-top:9px;font-size:13px;line-height:1.55;color:var(--fg2)}
+.src{margin-top:14px;font-size:10.5px;line-height:1.5;color:var(--fg4)}
 
 /* ---------- 04 Traditions & facts ---------- */
 .chem{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:22px}
@@ -269,6 +269,8 @@ img{display:block}
 .day .ico{display:block;flex:none;width:28px;height:28px;margin-top:8px;fill:none;stroke:currentColor;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round;
   color:color-mix(in srgb,var(--k) 52%,#fff);filter:drop-shadow(0 0 6px color-mix(in srgb,var(--k) 85%,transparent))}
 .day .ico .f{fill:currentColor;stroke:none}
+.day .t2{display:flex;align-items:center;gap:5px;margin-top:3px}
+.day .t2 i{flex:none;width:6px;height:6px;border-radius:50%;background:var(--k2);box-shadow:0 0 6px var(--k2)}
 .day.off .ico{position:relative;z-index:1;color:rgba(255,255,255,.3);filter:none}
 .day.off .t{position:relative;z-index:1;font:500 8.5px/1.35 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:rgba(243,246,242,.5)}
 .day.off{background:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
@@ -464,19 +466,19 @@ img{display:block}
       <div class="kicker">Образовательное направление</div>
       <h2 class="h1"><span class="g">Зелёная</span> химия</h2>
     </div>
-    <p class="lead" style="margin-top:18px">Химия, которая отвечает за последствия. Её задача — создавать вещества и процессы, в которых меньше опасных веществ и отходов и больше пользы для людей и планеты.</p>
+    <p class="p3lead">Зелёная химия — это научное направление, которое предполагает усовершенствование уже существующих и разработку новых химических процессов и продуктов, не оказывающих вредного воздействия на окружающую среду и здоровье человека.</p>
 
-    <div class="stats">
-      <div class="stat"><div class="n">12</div><p>принципов зелёной химии сформулировали Пол Анастас и Джон Уорнер в 1998 году.</p></div>
-      <div class="stat"><div class="n">2005</div><p>Нобелевская премия по химии за метатезис — «большой шаг вперёд для зелёной химии».</p></div>
-      <div class="stat"><div class="n">25–100<small>+ кг</small></div><p>отходов на 1 кг лекарства в фармацевтике (E-фактор Шелдона). Зелёная химия учит их сокращать.</p></div>
-      <div class="stat"><div class="n">24<small>дня</small></div><p>длилась первая смена технопарка в 2021 году, и «Зелёная химия» была одним из трёх её направлений.</p></div>
+    <figure class="group">
+      <img src="assets/img/people/group.jpg" alt="Общее фото с выступления">
+      <figcaption class="gcap glass dark"><b>Все вместе</b><span>С выступления на смене «Индустрия будущего»</span></figcaption>
+    </figure>
+
+    <div class="p3cols">
+      <div><span class="label">Шире химии</span><p>Идеи зелёной химии выходят за рамки собственно химии и распространяются на различные области — от энергетики до устойчивого развития общества.</p></div>
+      <div><span class="label">Программы направления</span><p>«Зелёная химия» и «Зелёный химический синтез». Вторая объединяет неорганическую и органическую химию, биохимию и другие разделы, чтобы с помощью принципов зелёной химии совершенствовать химические процессы.</p></div>
     </div>
 
-    <div class="sub"><h3>12 принципов зелёной химии</h3><span class="label">П. Анастас, Дж. Уорнер · 1998</span></div>
-    <div class="principles" id="principles"></div>
-
-    <p class="src">Источники: P. T. Anastas, J. C. Warner. Green Chemistry: Theory and Practice (1998); пресс-релиз Нобелевского комитета (2005); R. A. Sheldon, E-factor; «Знамя юности», «Тридцать первых» (04.02.2021).</p>
+    <p class="src">По материалам сайта Национального детского технопарка, ndtp.by</p>
     <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">03 <span>/ 09</span></span></div>
   </div>
 </section>
@@ -512,8 +514,7 @@ img{display:block}
           <li><span class="i">01</span><div><b>Корпоративный совет</b><p>Генеральный директор представляет профиль на «Корпоративном совете» и распределяет поручения в команде.</p></div></li>
           <li><span class="i">02</span><div><b>Общая копилка технобаллов</b><p>Финансовый менеджер считает каждый балл и вместе с командой строит стратегию успеха.</p></div></li>
           <li><span class="i">03</span><div><b>Спорт-минутки</b><p>Разминки и тренировки перед соревнованиями — часть нашего дня.</p></div></li>
-          <li><span class="i">04</span><div><b>Четыре коворкинга</b><p>Весь профиль работает над проектами вместе. На втором коворкинге — релиз.</p></div></li>
-          <li><span class="i">05</span><div><b>Каждый — витраж</b><p>Мы превратили свои портреты в витражи: каждый стал осколком общего узора.</p></div></li>
+                    <li><span class="i">04</span><div><b>Каждый — витраж</b><p>Мы превратили свои портреты в витражи: каждый стал осколком общего узора.</p></div></li>
         </ol>
       </div>
       <div class="facts">
@@ -623,7 +624,7 @@ img{display:block}
     <div class="rh"><span class="l"><i class="mark"></i>Зелёный спектр · № 01</span><span>Календарь событий профиля</span></div>
     <div class="head" style="margin-top:26px">
       <div class="kicker">Календарь смены</div>
-      <h2 class="h1" style="font-size:46px">24 дня — <span class="g">24 события</span></h2>
+      <h2 class="h1" style="font-size:46px">24 дня — <span class="g">25 событий</span></h2>
     </div>
     <p class="lead" style="margin-top:12px;font-size:14.5px">С 28 октября по 20 ноября 2026 года. Каждый день смены — ещё один осколок нашего витража, а весь календарь — витраж целиком.</p>
     <div class="legend" id="legend"></div>
@@ -662,7 +663,7 @@ img{display:block}
       <div><b>10</b><span>участников</span></div>
       <div><b>10</b><span>ролей</span></div>
       <div><b>24</b><span>дня смены</span></div>
-      <div><b>24</b><span>события</span></div>
+      <div><b>25</b><span>событий</span></div>
       <div><b>1</b><span>общий витраж</span></div>
     </div>
     <div class="ft glass back-ft"><span class="l"><i class="mark"></i>«Зелёный спектр» · журнал профиля «Зелёная химия» · Национальный детский технопарк, 2026</span><span class="pn">09 <span>/ 09</span></span></div>
@@ -678,25 +679,6 @@ img{display:block}
 const COL = n => `var(--c${n})`;
 const pad2 = n => String(n).padStart(2,'0');
 const el = (p, cls='') => `<div class="el ${cls}" style="--c:${COL(p.n)}"><i>${p.n}</i><b>${p.sym}</b></div>`;
-
-/* principles */
-const PR = [
-  ['Предотвращение отходов','Не создавать отходы проще, чем перерабатывать их'],
-  ['Атомная экономия','Максимум атомов сырья — в конечный продукт'],
-  ['Менее опасный синтез','Как можно меньше вредных веществ в процессе'],
-  ['Безопасные продукты','Та же польза при меньшей токсичности'],
-  ['Безопасные растворители','Меньше вспомогательных веществ — и только безвредные'],
-  ['Энерго­эффективность','Комнатная температура и обычное давление'],
-  ['Возобновляемое сырьё','Вместо исчерпаемых ресурсов, где это возможно'],
-  ['Меньше лишних стадий','Без ненужных промежуточных продуктов'],
-  ['Катализ','Селективный катализатор вместо избытка реагентов'],
-  ['Безопасное разложение','После использования — на безопасные вещества'],
-  ['Контроль в реальном времени','Замечать опасность до того, как она возникнет'],
-  ['Предотвращение аварий','Минимум риска утечек, взрывов и пожаров'],
-];
-const prCols = ['#5BE38B','#4FD9A0','#2ED3B7','#33C3F0','#4FA8FF','#4D8BFF','#7B6CFF','#A07BFF','#C56CFF','#FF6F91','#FF8A3D','#FFC43D'];
-document.getElementById('principles').innerHTML = PR.map((p,i)=>
-  `<div class="pr" style="--c:${prCols[i]}"><div class="no">${pad2(i+1)}<i></i></div><h4>${p[0]}</h4><p>${p[1]}</p></div>`).join('');
 
 /* gallery */
 const win = p => `<article class="cell" style="--c:${COL(p.n)}">
@@ -738,14 +720,14 @@ const K = {proj:['Проекты и коворкинги','var(--k-proj)'], art:
 const EV = {
   '10-28':['Техно-кросс','sport'], '10-29':['Техно-индустрия','common'], '10-30':['Деловая игра «Корпорация»','proj'],
   '10-31':['Дискотека «Привет, технопарк»','fun'], '11-01':['Коворкинг № 1','proj'], '11-02':['Киноклуб «Наше кино»','art'],
-  '11-03':['Перформанс','art'], '11-04':['Коворкинг № 2. Релиз','proj',1], '11-05':['Спектакль «Ефросиния Полоцкая»','art'],
+  '11-03':['Перформанс','art'], '11-04':['Коворкинг № 2','proj',1,['Релиз','common']], '11-05':['Спектакль «Ефросиния Полоцкая»','art'],
   '11-06':['«Поток»','common'], '11-07':['Коворкинг № 3','proj'], '11-08':['Соревнования «Волейбол»','sport'],
   '11-09':['Интеграция','common'], '11-10':['Коворкинг № 4','proj'], '11-11':['Мастер-класс музея народной архитек­туры и быта','proj'],
   '11-12':['Единый день информи­рования','common'], '11-13':['Генеральная репетиция «Синергии»','art'], '11-14':['Дискотека «В кругу друзей»','fun'],
   '11-15':['Тимлидерский концерт','art'], '11-16':['«Синергия»','art',1], '11-17':['Генеральная репетиция фестиваля «Шум»','art'],
   '11-18':['Фестиваль детского творчества «Шум»','art',1], '11-19':['Торжественное закрытие образо­вательной смены','common',1], '11-20':['Акция «Чистый технодом»','common'],
 };
-const counts = {}; Object.values(EV).forEach(e=>counts[e[1]]=(counts[e[1]]||0)+1);
+const counts = {}; Object.values(EV).forEach(e=>{counts[e[1]]=(counts[e[1]]||0)+1; if(e[3]) counts[e[3][1]]=(counts[e[3][1]]||0)+1;});
 document.getElementById('legend').innerHTML = ['art','proj','common','sport','fun'].map(k=>
   `<span class="chip" style="--k:${K[k][1]}"><i></i>${K[k][0]}<b>${counts[k]}</b></span>`).join('') +
   `<span class="chip" style="--k:#ffffff"><i></i>главные</span>`;
@@ -797,12 +779,12 @@ for (let i=0;i<28;i++){
   const e = EV[key];
   const mon = d.getMonth()===9?'окт':'ноя';
   if(!e){ const o = OFF[key]; cal += `<div class="day off"><div class="d">${d.getDate()}</div><div class="m">${mon}</div>${o?svg(o[0]):''}<div class="t">${o?o[1]:''}</div></div>`; continue; }
-  strip.push(K[e[1]][1]);
+  strip.push(e[3] ? {k:K[e[1]][1], bg:`linear-gradient(90deg,${K[e[1]][1]} 50%,${K[e[3][1]][1]} 50%)`} : {k:K[e[1]][1], bg:K[e[1]][1]});
   const showMon = (key==='10-28'||key==='11-01');
-  cal += `<div class="day ${e[2]?'key':''}" style="--k:${K[e[1]][1]}"><div class="d">${d.getDate()}</div>${e[2]?'<i class="dot"></i>':(showMon?`<div class="m">${mon}</div>`:'')}${svg(ICO[key])}<div class="t">${e[0]}</div></div>`;
+  cal += `<div class="day ${e[2]?'key':''}" style="--k:${K[e[1]][1]}"><div class="d">${d.getDate()}</div>${e[2]?'<i class="dot"></i>':(showMon?`<div class="m">${mon}</div>`:'')}${svg(ICO[key])}<div class="t">${e[0]}${e[3]?`<span class="t2" style="--k2:${K[e[3][1]][1]}"><i></i>${e[3][0]}</span>`:''}</div></div>`;
 }
 document.getElementById('cal').innerHTML = cal;
-document.getElementById('strip').innerHTML = strip.map(c=>`<span style="--k:${c}"></span>`).join('');
+document.getElementById('strip').innerHTML = strip.map(c=>`<span style="--k:${c.k};background:${c.bg}"></span>`).join('');
 
 /* ---------------- Typography: non-breaking spaces ---------------- */
 function nbsp(root){
