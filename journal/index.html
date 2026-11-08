@@ -295,6 +295,7 @@ img{display:block}
 .strip{display:grid;grid-template-columns:repeat(24,1fr);gap:3px;height:22px;margin-top:14px}
 .strip span{border-radius:4px;background:var(--k);box-shadow:0 0 12px -3px var(--k),inset 0 1px 0 rgba(255,255,255,.45)}
 .phases{display:grid;grid-template-columns:4fr 4fr 6fr 8fr 2fr;gap:3px;margin-top:8px}
+.phases.weeks{grid-template-columns:5fr 7fr 7fr 5fr}
 .phase{position:relative;padding-top:9px}
 .phase::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;border:1px solid rgba(255,255,255,.3);border-top:0;border-radius:0 0 4px 4px}
 .phase b{display:block;font:600 12px/1.15 var(--text)}
@@ -421,7 +422,7 @@ img{display:block}
           <text x="704" y="135" text-anchor="end" fill="rgba(243,246,242,.4)">КАЖДЫЙ ИЗ НАС</text>
         </g>
       </svg>
-      <figcaption>Преломление — изменение направления света на границе двух сред. Именно оно позволяет призме разложить белый свет в спектр: это показал Исаак Ньютон в 1660-х годах.</figcaption>
+      <figcaption>Преломление — это изменение направления света на границе двух сред. Из-за него призма раскладывает белый свет на цвета, как в опыте Исаака Ньютона.</figcaption>
     </figure>
 
     <div class="cols2 body">
@@ -436,19 +437,19 @@ img{display:block}
         <svg class="ic" viewBox="0 0 30 30"><polygon points="4,24 12,5 26,10 22,26" fill="none" stroke="#5BE38B" stroke-width="1.4" stroke-linejoin="round"/><polygon points="12,5 26,10 16,15" fill="#5BE38B" fill-opacity=".35"/></svg>
         <span class="num">01 · СТЕКЛО</span>
         <h4>Осколок</h4>
-        <p>Каждый из нас: свой цвет, свой характер и своя история.</p>
+        <p>Это каждый из нас. Мы все разные, поэтому витраж получается цветным.</p>
       </div>
       <div class="card">
         <svg class="ic" viewBox="0 0 30 30"><path d="M3 9 H27 M3 21 H27 M11 3 V27 M19 3 V27" stroke="#33C3F0" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg>
         <span class="num">02 · СВИНЦОВЫЙ ПРОФИЛЬ</span>
         <h4>Связь</h4>
-        <p>То, что соединяет осколки в узор: общее дело, традиции и дружба.</p>
+        <p>Свинцовые полоски держат стёкла вместе. У нас это общее дело и дружба.</p>
       </div>
       <div class="card">
         <svg class="ic" viewBox="0 0 30 30"><circle cx="15" cy="15" r="5" fill="#FFC43D"/><path d="M15 2V7M15 23V28M2 15H7M23 15H28M5.8 5.8L9.3 9.3M20.7 20.7L24.2 24.2M5.8 24.2L9.3 20.7M20.7 9.3L24.2 5.8" stroke="#FFC43D" stroke-width="1.4" stroke-linecap="round"/></svg>
         <span class="num">03 · СВЕТ</span>
         <h4>Идеи</h4>
-        <p>Энергия, которая проходит сквозь стекло и делает узор живым.</p>
+        <p>Без света витраж тёмный. Его оживляют наши идеи.</p>
       </div>
     </div>
 
@@ -509,7 +510,7 @@ img{display:block}
       <div class="kicker">Традиции и интересные факты</div>
       <h2 class="h1">Химия <span class="g">цвета</span></h2>
     </div>
-    <p class="lead" style="margin-top:16px">Витраж и химия связаны напрямую: цвет стеклу дают ионы и наночастицы металлов. Они поглощают одни длины волн света и пропускают другие — то, что прошло сквозь стекло, мы и видим как цвет.</p>
+    <p class="lead" style="margin-top:16px">Цвет витражу дают металлы, которые добавляют в стекло. Например, синий цвет даёт кобальт, а рубиновый получается благодаря золоту.</p>
 
     <div class="chem">
       <div class="shard" style="--c:#1F4FE0"><div class="sym">Co</div><div class="z">27</div><div class="nm">Кобальт<span>синий</span></div></div>
@@ -525,9 +526,9 @@ img{display:block}
         <h3>Наши традиции</h3>
         <ol>
           <li><span class="i">01</span><div><b>Корпоративный совет</b><p>Генеральный директор представляет профиль на «Корпоративном совете» и распределяет поручения в команде.</p></div></li>
-          <li><span class="i">02</span><div><b>Общая копилка технобаллов</b><p>Финансовый менеджер считает каждый балл и вместе с командой строит стратегию успеха.</p></div></li>
-          <li><span class="i">03</span><div><b>Спорт-минутки</b><p>Разминки и тренировки перед соревнованиями — часть нашего дня.</p></div></li>
-                    <li><span class="i">04</span><div><b>Каждый — витраж</b><p>Мы превратили свои портреты в витражи: каждый стал осколком общего узора.</p></div></li>
+          <li><span class="i">02</span><div><b>Общая копилка технобаллов</b><p>Технобаллы зарабатываем всем профилем, а считает их финансовый менеджер.</p></div></li>
+          <li><span class="i">03</span><div><b>Спорт-минутки</b><p>Перед соревнованиями разминаемся и тренируемся вместе.</p></div></li>
+                    <li><span class="i">04</span><div><b>Портреты-витражи</b><p>Портреты в журнале сделаны в стиле витража, как у нашей мастерской «Преломление».</p></div></li>
         </ol>
       </div>
       <div class="facts">
@@ -535,7 +536,7 @@ img{display:block}
         <div class="fact">
           <span class="label">Факт № 1 · Нанотехнологии Древнего Рима</span>
           <h4>Кубок Ликурга</h4>
-          <p>Римский кубок IV века в отражённом свете зелёный, а на просвет — красный. Секрет — наночастицы золота и серебра в стекле: нанотехнологии за 1600 лет до появления самого слова.</p>
+          <p>Римский кубок IV века в отражённом свете зелёный, а на просвет красный. Так работают наночастицы золота и серебра, которые есть в его стекле.</p>
           <div class="cup">
             <div class="sw" style="background:linear-gradient(150deg,#7fd99a,#1e7a46);color:#06200f">отражение</div>
             <div class="sw" style="background:linear-gradient(150deg,#ff7a6b,#9e1230);color:#2a0308">на просвет</div>
@@ -545,12 +546,12 @@ img{display:block}
           <span class="label">Факт № 2 · Стекло и экология</span>
           <span class="big">∞</span>
           <h4>Бесконечная переработка</h4>
-          <p>Стекло можно переплавлять снова и снова без потери качества. Каждые 10 % стеклобоя экономят на плавке около 2–3 % энергии.</p>
+          <p>Стекло можно переплавлять снова и снова, и хуже оно от этого не становится. Если добавить к сырью 10 % стеклобоя, на плавку уйдёт примерно на 2–3 % меньше энергии.</p>
         </div>
         <div class="fact">
           <span class="label">Факт № 3 · Рецепт стекла</span>
           <h4>Песок, сода и известняк</h4>
-          <p>Оконное стекло примерно на 70 % состоит из кварцевого песка (SiO<sub style="font-size:.75em;line-height:0">2</sub>), остальное — в основном оксиды натрия и кальция из соды и известняка.</p>
+          <p>Оконное стекло примерно на 70 % состоит из кварцевого песка (SiO<sub style="font-size:.75em;line-height:0">2</sub>). Остальное в основном дают сода и известняк.</p>
         </div>
       </div>
     </div>
@@ -571,11 +572,11 @@ img{display:block}
       <div class="gintro">
         <div class="kicker">Фотогалерея</div>
         <h2>Лица<br>профиля</h2>
-        <p>Десять человек — десять осколков одного витража. Каждый портрет мы превратили в витражное стекло.</p>
+        <p>Это мы, десять человек профиля. Портреты сделаны в стиле витража, как у нашей мастерской.</p>
         <div class="ptable">
           <span class="label">Периодическая система профиля</span>
           <div class="grid" id="ptable"></div>
-          <small>Номер — порядок в списке. Символ — наш «химический элемент».</small>
+          <small>У каждого свой «химический элемент»: номер из списка и буквы фамилии.</small>
         </div>
       </div>
     </div>
@@ -630,7 +631,7 @@ img{display:block}
       <div class="kicker">Структура самоуправления</div>
       <h2 class="h1" style="font-size:44px">Корпорация<br><span class="g">«Зелёная химия»</span></h2>
     </div>
-    <p class="lead" style="margin-top:14px;font-size:15px;max-width:none">На смене «Индустрия будущего» профиль работает как компания: у каждого своя должность и зона ответственности. По отдельности — элементы, вместе — устойчивое соединение.</p>
+    <p class="lead" style="margin-top:14px;font-size:15px;max-width:none">На смене «Индустрия будущего» профиль устроен как компания, и у каждого есть своя должность. Ниже написано, кто за что отвечает.</p>
 
     <div class="mentors">
       <div><b>Тимлидеры-инвесторы</b><span class="mnames" id="mnames"></span></div>
@@ -657,20 +658,19 @@ img{display:block}
       <div class="kicker">Календарь смены</div>
       <h2 class="h1" style="font-size:46px">24 дня — <span class="g">25 событий</span></h2>
     </div>
-    <p class="lead" style="margin-top:12px;font-size:14.5px">С 28 октября по 20 ноября 2026 года. Каждый день смены — ещё один осколок нашего витража, а весь календарь — витраж целиком.</p>
+    <p class="lead" style="margin-top:12px;font-size:14.5px">С 28 октября по 20 ноября 2026 года. Цвет ячейки показывает, к чему относится событие.</p>
     <div class="legend" id="legend"></div>
     <div class="cal" id="cal"></div>
     <div class="timeline">
-      <div class="hd"><b>Как растёт команда</b><span class="label">Модель Брюса Такмана</span></div>
+      <div class="hd"><b>Смена по дням</b><span class="label">28.10 — 20.11</span></div>
       <div class="strip" id="strip"></div>
-      <div class="phases">
-        <div class="phase"><b>Знакомство</b><span>формирование</span><em>28.10—31.10</em></div>
-        <div class="phase"><b>Притирка</b><span>«шторм»</span><em>01.11—04.11</em></div>
-        <div class="phase"><b>Сплочение</b><span>нормирование</span><em>05.11—10.11</em></div>
-        <div class="phase"><b>Результат</b><span>функционирование</span><em>11.11—18.11</em></div>
-        <div class="phase"><b>Финал</b><span>завершение</span><em>19—20.11</em></div>
+      <div class="phases weeks">
+        <div class="phase"><b>1-я неделя</b><em>28.10—01.11</em></div>
+        <div class="phase"><b>2-я неделя</b><em>02.11—08.11</em></div>
+        <div class="phase"><b>3-я неделя</b><em>09.11—15.11</em></div>
+        <div class="phase"><b>4-я неделя</b><em>16.11—20.11</em></div>
       </div>
-      <p class="note">Стадии развития команды по модели психолога Брюса Такмана (1965, 1977) — от первого знакомства до общего финала.</p>
+      <p class="note">Каждый квадрат — один день. Цвета такие же, как в календаре.</p>
     </div>
     <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">09 <span>/ 10</span></span></div>
   </div>
@@ -687,8 +687,8 @@ img{display:block}
     <div class="rh"><span class="l"><i class="mark"></i>Зелёный спектр · № 01</span><span>Мастерская «Преломление»</span></div>
     <div class="back-head">
       <div class="kicker">Вместо послесловия</div>
-      <p class="big">Каждый осколок хранит историю. <span class="g">Вместе мы — свет.</span></p>
-      <p class="s">Поодиночке осколки кажутся случайными. Сложенные вместе, они становятся витражом, сквозь который проходит свет будущего.</p>
+      <p class="big">Каждый осколок <span class="g">хранит историю.</span></p>
+      <p class="s">Картина оживает, когда сквозь неё проходит свет — свет новых идей, общего дела и энергии тех, кто создаёт будущее прямо сейчас.</p>
     </div>
     <div class="glass prism nums">
       <div><b>10</b><span>участников</span></div>
@@ -720,7 +720,7 @@ const win = p => `<article class="cell" style="--c:${COL(p.n)}">
   <p class="capt">${p.cap}</p></article>`;
 document.getElementById('gal1').insertAdjacentHTML('beforeend', P.slice(0,5).map(win).join(''));
 document.getElementById('gal2').innerHTML = P.slice(5,10).map(win).join('') +
-  `<div class="glass prism gquote"><div class="qart"><img src="assets/img/logo.webp" alt=""></div><div class="qt"><div class="qm">“</div><p class="q">Поодиночке осколки кажутся случайными. Вместе — это витраж.</p>
+  `<div class="glass prism gquote"><div class="qart"><img src="assets/img/logo.webp" alt=""></div><div class="qt"><div class="qm">“</div><p class="q">В технопарке каждый насыщенный день оставляет свой след.</p>
    <span class="label">Мастерская «Преломление»</span>
    <div class="row">${P.map(p=>`<span style="background:${COL(p.n)};box-shadow:0 0 8px ${COL(p.n)}"></span>`).join('')}</div></div></div>`;
 document.getElementById('ptable').innerHTML = P.map(p=>el(p)).join('');
@@ -802,7 +802,7 @@ const ICO = {'10-28':'shoe','10-29':'gear','10-30':'case','10-31':'disco','11-01
   '11-12':'info','11-13':'stage','11-14':'friends','11-15':'notes','11-16':'venn','11-17':'mic','11-18':'speaker',
   '11-19':'fireworks','11-20':'broom'};
 const OFF = {'10-26':['hourglass','до старта — 2 дня'],'10-27':['hourglass','до старта — 1 день'],
-  '11-21':['heart','до новых встреч'],'11-22':['window','витраж собран']};
+  '11-21':['heart','после смены'],'11-22':['window','после смены']};
 const svg = name => `<svg class="ico" viewBox="0 0 24 24" aria-hidden="true">${IC[name]}</svg>`;
 
 const wd = ['Пн','Вт','Ср','Чт','Пт','Сб','Вс'];
