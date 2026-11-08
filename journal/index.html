@@ -221,7 +221,20 @@ img{display:block}
 .gquote .row{display:flex;gap:6px;margin-top:14px}
 .gquote .row span{flex:1;height:5px;border-radius:3px}
 
+/* ---------- Team leaders ---------- */
+.tl-photo{position:relative;margin-top:26px;height:690px;overflow:hidden;background:#0c0f0d;
+  border-radius:50% 50% 24px 24px / 190px 190px 24px 24px;
+  box-shadow:0 0 0 1px rgba(255,255,255,.16),0 34px 70px -34px rgba(79,195,247,.55)}
+.tl-photo img{position:absolute;left:50%;top:-34px;width:100%;height:auto;transform:translateX(-50%) scale(1.09);transform-origin:50% 0}
+.tl-photo::after{content:"";position:absolute;inset:7px;border-radius:50% 50% 18px 18px / 184px 184px 18px 18px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.3);pointer-events:none}
+.tl-cols{display:grid;grid-template-columns:1fr 1fr;column-gap:34px;margin-top:24px}
+.tl-cols>div{padding-top:14px;border-top:1px solid color-mix(in srgb,var(--c) 60%,rgba(255,255,255,.1))}
+.tl-cols b{display:block;font:600 18px/1.15 var(--display);letter-spacing:-.035em}
+.tl-cols .label{display:block;margin-top:7px;color:var(--c)}
+.tl-cols p{margin-top:10px;font-size:13px;line-height:1.55;color:var(--fg2)}
+
 /* ---------- 07 Structure ---------- */
+.mentors .mnames{display:block;margin-top:7px;font:500 12.6px/1.4 var(--text);color:#fff}
 .mentors{display:grid;grid-template-columns:196px 1fr;gap:18px;align-items:start;padding:14px 0;margin-top:20px;border-top:1px solid rgba(255,255,255,.14);border-bottom:1px solid rgba(255,255,255,.14)}
 .mentors b{display:block;font:600 13px/1.2 var(--display);letter-spacing:-.035em;white-space:nowrap}
 .mentors .label{display:block;margin-top:7px}
@@ -441,15 +454,15 @@ img{display:block}
 
     <nav class="toc">
       <span class="label">В номере</span>
-      <a><b>02</b><span>Мастерская «Преломление»</span></a>
       <a><b>03</b><span>Зелёная химия</span></a>
       <a><b>04</b><span>Традиции и факты</span></a>
       <a><b>05</b><span>Лица профиля</span></a>
-      <a><b>07</b><span>Самоуправление</span></a>
-      <a><b>08</b><span>Календарь смены</span></a>
+      <a><b>07</b><span>Наши тимлидеры</span></a>
+      <a><b>08</b><span>Самоуправление</span></a>
+      <a><b>09</b><span>Календарь смены</span></a>
     </nav>
 
-    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">02 <span>/ 09</span></span></div>
+    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">02 <span>/ 10</span></span></div>
   </div>
 </section>
 
@@ -479,7 +492,7 @@ img{display:block}
     </div>
 
     <p class="src">По материалам сайта Национального детского технопарка, ndtp.by</p>
-    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">03 <span>/ 09</span></span></div>
+    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">03 <span>/ 10</span></span></div>
   </div>
 </section>
 
@@ -541,7 +554,7 @@ img{display:block}
         </div>
       </div>
     </div>
-    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">04 <span>/ 09</span></span></div>
+    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">04 <span>/ 10</span></span></div>
   </div>
 </section>
 
@@ -566,7 +579,7 @@ img{display:block}
         </div>
       </div>
     </div>
-    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">05 <span>/ 09</span></span></div>
+    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">05 <span>/ 10</span></span></div>
   </div>
 </section>
 
@@ -581,7 +594,26 @@ img{display:block}
   <div class="pad">
     <div class="rh"><span class="l"><i class="mark"></i>Зелёный спектр · № 01</span><span>Фотогалерея · 06—10</span></div>
     <div class="gal" id="gal2"></div>
-    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">06 <span>/ 09</span></span></div>
+    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">06 <span>/ 10</span></span></div>
+  </div>
+</section>
+
+<!-- ===================== 07 · TEAM LEADERS ===================== -->
+<section class="page" id="p7tl">
+  <div class="bgfx">
+    <div class="orb" style="width:560px;height:420px;left:-240px;top:-160px;background:#1f4fe0;opacity:.34"></div>
+    <div class="orb" style="width:520px;height:420px;right:-240px;top:380px;background:#c9a227;opacity:.22"></div>
+    <div class="orb" style="width:560px;height:420px;left:-200px;bottom:-180px;background:#12a158;opacity:.36"></div>
+  </div>
+  <div class="pad">
+    <div class="rh"><span class="l"><i class="mark"></i>Зелёный спектр · № 01</span><span>Тимлидеры-инвесторы</span></div>
+    <div class="head">
+      <div class="kicker">Тимлидеры-инвесторы</div>
+      <h2 class="h1">Наши <span class="g">тимлидеры</span></h2>
+    </div>
+    <figure class="tl-photo"><img src="assets/img/people/timleaders.jpg" alt="Тимлидеры профиля"></figure>
+    <div class="tl-cols" id="tlcols"></div>
+    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">07 <span>/ 10</span></span></div>
   </div>
 </section>
 
@@ -601,14 +633,14 @@ img{display:block}
     <p class="lead" style="margin-top:14px;font-size:15px;max-width:none">На смене «Индустрия будущего» профиль работает как компания: у каждого своя должность и зона ответственности. По отдельности — элементы, вместе — устойчивое соединение.</p>
 
     <div class="mentors">
-      <div><b>Тимлидеры-инвесторы</b><span class="label">Наставники профиля</span></div>
+      <div><b>Тимлидеры-инвесторы</b><span class="mnames" id="mnames"></span></div>
       <p>Руководят деятельностью стартап-центра, направляют учащихся при выборе содержания деятельности, создают ситуацию успеха и мотивируют на результат.</p>
     </div>
     <div class="label sect">Руководство профиля</div>
     <div class="leaders" id="leaders"></div>
     <div class="label sect">Команда · 8 должностей</div>
     <div class="team" id="team"></div>
-    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">07 <span>/ 09</span></span></div>
+    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">08 <span>/ 10</span></span></div>
   </div>
 </section>
 
@@ -640,7 +672,7 @@ img{display:block}
       </div>
       <p class="note">Стадии развития команды по модели психолога Брюса Такмана (1965, 1977) — от первого знакомства до общего финала.</p>
     </div>
-    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">08 <span>/ 09</span></span></div>
+    <div class="ft"><span class="l">Профиль «Зелёная химия» · Смена «Индустрия будущего»</span><span class="pn">09 <span>/ 10</span></span></div>
   </div>
 </section>
 
@@ -665,7 +697,7 @@ img{display:block}
       <div><b>25</b><span>событий</span></div>
       <div><b>1</b><span>общий витраж</span></div>
     </div>
-    <div class="ft glass back-ft"><span class="l"><i class="mark"></i>«Зелёный спектр» · журнал профиля «Зелёная химия» · Национальный детский технопарк, 2026</span><span class="pn">09 <span>/ 09</span></span></div>
+    <div class="ft glass back-ft"><span class="l"><i class="mark"></i>«Зелёный спектр» · журнал профиля «Зелёная химия» · Национальный детский технопарк, 2026</span><span class="pn">10 <span>/ 10</span></span></div>
   </div>
 </section>
 
@@ -713,6 +745,11 @@ document.getElementById('team').innerHTML = order.map(r=>{const p=byRole(r);retu
       <p>${p.task}</p></div>
     <div class="corner">${el(p,'sm')}</div>
   </div>`}).join('');
+
+/* team leaders (names and captions live in data/people.js) */
+const TLC = ['#E9C46A', '#7FA8FF'];
+document.getElementById('tlcols').innerHTML = TL.map((t, i) => `<div style="--c:${TLC[i] || '#5BE38B'}"><b>${t.name}</b><span class="label">${i === 0 ? 'На портрете слева' : 'На портрете справа'}</span><p>${t.cap}</p></div>`).join('');
+document.getElementById('mnames').innerHTML = TL.map(t => t.name).join('<br>');
 
 /* calendar */
 const K = {proj:['Проекты и коворкинги','var(--k-proj)'], art:['Сцена и творчество','var(--k-art)'], common:['События технопарка','var(--k-common)'], sport:['Спорт','var(--k-sport)'], fun:['Дискотеки','var(--k-fun)']};
